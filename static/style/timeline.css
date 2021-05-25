@@ -1,0 +1,80 @@
+.item_year,  .item_desc {
+	flex: 1;
+}
+ .history_content .history_right_item{
+	width: 650rpx;
+	display: flex;
+	flex-direction: row;
+}
+.history_content  .history_right_item .item_year {
+	background-image: url(../../static/images/dialog.png);
+	background-position: 55rpx 15rpx;
+	background-repeat: no-repeat;
+	background-size: 55% ;
+	text-align: center;
+	color: #fff;
+	font-size: 27rpx;
+	font-weight: bold;
+	padding-top: 50rpx;
+}
+.history_content  .history_right_item .item_line{
+	width: 4rpx;
+	margin: 0 20rpx;
+	background-color:#B7EFF9;
+}
+.history_content .history_right_item .item_line .item_line_dot  {
+	width: 14px;
+	height: 14px;
+	margin: 20rpx auto;
+	background-color: #B7EFF9;
+	border-radius: 50%;
+	position: relative;
+	left: -14rpx;
+	top: 120rpx;
+}
+
+.history_content .history_right_item .item_desc {
+	margin-top: 150rpx;
+	padding-bottom: 100rpx;
+	margin-left: 30rpx;
+}
+
+.history_content .history_right_item .item_desc .desc_list .title{
+	font: 24rpx;
+	font-weight: 400;
+	color: #b7eff9;
+}
+.history_content .history_right_item .item_desc .desc_list .word{
+	font-size: 24rpx;
+	font-weight: 400;
+	width: 300rpx;
+	color: #888888;
+}
+.history_content .history_right_item .item_desc .desc_list {
+	text-align: left;
+	margin-top: 15rpx;
+	padding: 0rpx 20rpx 20rpx 0rpx;
+}
+
+
+//悬浮按钮
+.theButt{
+	
+	
+}
+.butt{
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0rpx 0rpx 30rpx 1rpx #e2e2e2;
+	right: 70rpx;
+	position: fixed;
+	text-align: center;
+}
+#theTop{
+	bottom: 250rpx;
+}
+#theBottom{
+	bottom: 130rpx;
+}

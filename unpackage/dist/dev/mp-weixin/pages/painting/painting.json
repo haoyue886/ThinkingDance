@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "思维跳跃",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "tabbar": "/components/tabbar/tabbar"
+  }
+}

@@ -1,0 +1,96 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path":"pages/index/index",
+			"style":{
+				"navigationBarTitleText":"Thinking Dance思维跳动",
+				"backgroundColor": "#efefef",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/painting/painting",
+			"style": {
+				"navigationBarTitleText": "思维跳跃",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path":"pages/user/user",
+			"style":{
+				"navigationBarTitleText":"个人中心",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		
+		{
+			"path":"pages/timeline/timeline1",
+			"style":{
+				"navigationBarTitleText":"时间轴",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path":"pages/timeline/timeline",
+			"style":{
+				"navigationBarTitleText":"时间轴",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path":"pages/user/feedback",
+			"style":{
+				"navigationBarTitleText":"反馈",
+				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path":"pages/user/licence",
+			"style":{
+				"navigationBarTitleText":"声明",
+				"navigationBarTextStyle": "white"
+			}
+		}
+			
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "Thinking Beat思维跳跃",
+		"navigationBarBackgroundColor": "#5B4CB1",
+		"backgroundColor": "#f4f8f9"
+	},
+	 "tabBar": {
+	        "color": "#cdcdcd",
+	        "selectedColor": "#b7eff9",
+	        "borderStyle": "black",
+	        "backgroundColor": "#5B4CB1",
+	        "list": [{
+	                "pagePath": "pages/painting/painting",
+	                "iconPath": "static/icon/draw1.png",
+	                "selectedIconPath": "static/icon/draw2.png",
+	                "text": "画板"
+	            }, {
+	                "pagePath": "pages/index/index",
+	                "iconPath": "static/icon/home1.png",
+	                "selectedIconPath": "static/icon/home2.png",
+	                "text": "首页"
+	            },
+	            {
+	                "pagePath": "pages/user/user",
+	                "iconPath": "static/icon/my1.png",
+	                "selectedIconPath": "static/icon/my2.png",
+	                "text": "我的"
+	            }
+	        ]
+	    }
+	// "condition" : { //模式配置，仅开发期间生效
+	// 	"current": 0, //当前激活的模式(list 的索引项)
+	// 	"list": [
+	// 		{
+	// 			"name": "painting", //模式名称
+	// 			"path": "pages/painting/painting", //启动页面，必选
+	// 			"query": "" //启动参数，在页面的onLoad函数里面得到
+	// 		}
+	// 	]
+	// }
+}
