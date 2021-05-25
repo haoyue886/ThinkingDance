@@ -1,0 +1,83 @@
+.item_year,  .item_desc {
+	-webkit-box-flex: 1;
+	-webkit-flex: 1;
+	        flex: 1;
+}
+.history_content .history_right_item{
+	width: 650rpx;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	        flex-direction: row;
+}
+.history_content  .history_right_item .item_year {
+	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAABW0lEQVRYR+2XL0/DQBiHf28hhQkSLkGhEMwQHAY5BOKQWAQgEHwAkikEBoNGEAgNkg/QhZkNx8fAk9AhyErp+pIC+0MZebtstBVX2Xvvfk+eey+5IxTso4LxoLhANa+9BKYjkLWSpbUo6txbFhytSo9xbs9QzQuuAd7LEqafRY5W9n4SqAFwJSegplb2hgH62z4ZQ0JrGkPS2TWGjCHJgDRuesgYkgxI46aHjCHJgDQ+rIda71VwdCpN/Z9xvtRq9iBxhW1XANoBrOVRQgm8wMDq8DnUFNciugOHD1qVPmvHfpfVX/xy2KEbIqz/Du9vhQj2XTA2ULxO/el1MZyecgi0+TM4J6AYouHxvI/gCsD2wHurd3nP1FA37JbZnmsFFwB2v/7laGjQgPvsnxPRYWGAYjjXC84IWOu+SHPZsmSo672dbKmZ47QwEzn2o4SlqZ3IsU8TlLamcEAf9RO9JZmpK9EAAAAASUVORK5CYII=);
+	background-position: 55rpx 15rpx;
+	background-repeat: no-repeat;
+	background-size: 55% ;
+	text-align: center;
+	color: #fff;
+	font-size: 27rpx;
+	font-weight: bold;
+	padding-top: 50rpx;
+}
+.history_content  .history_right_item .item_line{
+	width: 4rpx;
+	margin: 0 20rpx;
+	background-color:#B7EFF9;
+}
+.history_content .history_right_item .item_line .item_line_dot  {
+	width: 14px;
+	height: 14px;
+	margin: 20rpx auto;
+	background-color: #B7EFF9;
+	border-radius: 50%;
+	position: relative;
+	left: -14rpx;
+	top: 120rpx;
+}
+.history_content .history_right_item .item_desc {
+	margin-top: 150rpx;
+	padding-bottom: 100rpx;
+	margin-left: 30rpx;
+}
+.history_content .history_right_item .item_desc .desc_list .title{
+	font: 24rpx;
+	font-weight: 400;
+	color: #b7eff9;
+}
+.history_content .history_right_item .item_desc .desc_list .word{
+	font-size: 24rpx;
+	font-weight: 400;
+	width: 300rpx;
+	color: #888888;
+}
+.history_content .history_right_item .item_desc .desc_list {
+	text-align: left;
+	margin-top: 15rpx;
+	padding: 0rpx 20rpx 20rpx 0rpx;
+}
+ /*悬浮按钮
+ */
+.theButt{
+}
+.butt{
+	width: 90rpx;
+	height: 90rpx;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0rpx 0rpx 30rpx 1rpx #e2e2e2;
+	right: 70rpx;
+	position: fixed;
+	text-align: center;
+}
+#theTop{
+	bottom: 250rpx;
+}
+#theBottom{
+	bottom: 130rpx;
+}
+

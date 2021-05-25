@@ -4,12 +4,23 @@
     "ignore": []
   },
   "setting": {
+<<<<<<< HEAD
     "urlCheck": false
   },
   "compileType": "miniprogram",
   "libVersion": "",
   "appid": "touristappid",
   "projectname": "Thinking beat",
+=======
+    "urlCheck": false,
+    "es6": false,
+    "postcss": false
+  },
+  "compileType": "miniprogram",
+  "libVersion": "",
+  "appid": "wx6b5315957dc28a1e",
+  "projectname": "thinking beat思维跳动",
+>>>>>>> 7d72864 (ui设计)
   "condition": {
     "search": {
       "current": -1,

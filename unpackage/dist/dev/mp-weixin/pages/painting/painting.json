@@ -1,3 +1,11 @@
 {
+<<<<<<< HEAD
   "usingComponents": {}
+=======
+  "navigationBarTitleText": "思维跳跃",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "tabbar": "/components/tabbar/tabbar"
+  }
+>>>>>>> 7d72864 (ui设计)
 }

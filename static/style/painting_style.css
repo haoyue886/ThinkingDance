@@ -1,0 +1,226 @@
+page{
+	width: 100%;
+	height: 100%;
+	font-family:YouYuan, SimSun,Microsoft YaHei,monospace;
+}
+
+
+
+    .content{
+		width: 100%;
+		height: 100%;
+	}
+	/*今日日期*/
+	.date_{
+		width: 50rpx;
+		height: 50rpx;
+		float: left;
+		margin-right: 15rpx;
+		margin-left: 15rpx;
+		text-align: center;
+		color: #9f9f9f;
+	}
+	#date{
+		position: fixed;
+		top: 40rpx;
+		left: 5%;
+		z-index: 10;
+		border:1px solid #5B4CB1;
+		width:153rpx;
+		height: 120rpx;
+	}
+	#date_d{
+		font-size: 50rpx;
+		font-weight: 400;
+		color:#F6C542 ;
+	}
+	#line{
+		transform: rotate(45deg);
+		width: 4rpx;
+		height: 120rpx;
+		background-color: #5B4CB1;
+	}
+	#date_y_m{
+		position: absolute;
+		bottom: 0;
+		right: 5rpx;
+		font-size: 50rpx;
+		color: #5B4CB1;
+	}
+	
+	
+	
+	
+	
+	
+	
+	/*右上功能栏*/
+	.right-top{
+		   position: fixed;
+	       top:25rpx;
+		   right: 70rpx;
+		   z-index: 1;
+		   width:250rpx;
+		   height: 250rpx;
+	}
+	.t_tool{
+		position: absolute;
+		top:50%;
+		left:50%;
+		transform: translate(-50%,-50%);
+		width: 30rpx;
+		height: 30rpx;
+		color: #fff;
+		text-align: center;
+		line-height: 30rpx;
+	}
+	#top_tool_1{
+		z-index: 1;
+		position: absolute;
+		transform: translate(149%,-235%);
+		right: 50%;
+		top: 50%;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #E35087;
+	}
+	#top_tool_2{
+		z-index: 1;
+		position: absolute;
+		transform: translate(345%,-50%);
+		right: 50%;
+		top: 50%;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #F6C542;
+	}#top_tool_3{
+		z-index: 1;
+		position: absolute;
+		transform: translate(345%,-235%);
+		right: 50%;
+		top: 50%;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #5B4CB1;
+	}
+	
+	#myCanvas{
+		background-color: #f4f8f9;
+		width: 100%;
+		height:1500rpx;
+	}
+	
+	
+	
+	
+	
+	
+	/*悬浮工具栏*/
+	/* 固定位置 */
+	#tool_box{
+		position: fixed;
+		bottom: 250rpx;
+		left: 0;
+		z-index: 1;
+		width:100rpx;
+		height: 250rpx;
+	}
+
+	.a_tool_1{	
+		position: absolute;
+		transform: translate(18%,-27%);
+		right: 50%;
+		top: 50%;
+		color: #fff;
+		text-align: center;
+		line-height: 50rpx;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #5B4CB1;
+	}
+	.a_tool_2{
+		position: absolute;
+		transform: translate(54%,121%);
+		right: 50%;
+		top: 50%;
+		color: #fff;
+		text-align: center;
+		line-height: 50rpx;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #F6C542;
+	}
+	.a_tool_3{
+		position: absolute;
+		transform: translate(165%,247%);
+		right: 50%;
+		top: 50%;
+		color: #fff;
+		text-align: center;
+		line-height: 50rpx;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #E35087;
+	}
+	.a_tool_4{
+		position: absolute;
+		transform: translate(282%,342%);
+		right: 50%;
+		top: 50%;
+		color: #fff;
+		text-align: center;
+		line-height: 50rpx;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #F6C542;
+	}	
+/* 	#a_tool_1{
+		bottom: 570rpx;	
+	}
+	#a_tool_2{
+		bottom: 470rpx;	
+	}
+	#a_tool_3{
+		bottom: 370rpx;	
+	}
+	#a_tool_4{
+		bottom: 270rpx;	
+	}
+ */
+
+
+
+
+
+	/*画笔样式*/
+	#myPen{
+		width: 450rpx;
+		height: 120rpx;
+		background-color: #FFFFFF;
+		opacity: 0.7;
+		box-shadow: 0rpx 0rpx 30rpx 1rpx #e2e2e2;	
+		border-radius: 30rpx;
+		position: fixed;
+		bottom: 220rpx;
+		right: 160rpx;	
+	}
+	.myColor{
+		width: 43rpx;
+		height: 43rpx;
+		float: left;
+		margin: 10rpx 16rpx;
+	}
+	.myThick{
+		height: 43rpx;
+		float: left;
+		margin: 5rpx 35rpx;
+		background-color: #333333;
+		
+	}

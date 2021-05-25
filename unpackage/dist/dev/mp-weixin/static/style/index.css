@@ -1,0 +1,280 @@
+page{width: 100%;
+	height: 100%;
+	background-color: #f4f8f9;
+	font-family:YouYuan, SimSun,Microsoft YaHei,monospace;
+}
+
+/*搜素框*/
+#toSearch{
+	width: 650rpx;
+	height: 40rpx;
+	margin: 0 auto;
+	border-radius: 50rpx;
+	border-bottom: 1rpx solid #afafaf;
+	padding: 5rpx 20rpx;
+}
+input{
+	text-align: left;
+	font-size: 20rpx;
+	letter-spacing: 3rpx;
+	float: left;
+}
+
+#search_img{
+	width: 40rpx;
+	height: 40rpx;
+	float: right;
+}
+
+	/*日历*/
+	#time{
+		width: 400rpx;
+		height: 180rpx;
+		background-color: #fff;
+		margin: 80rpx auto;
+		border-radius: 20rpx;
+		box-shadow: 0 5rpx 20rpx #ddd;
+		
+	}
+	#t_date{
+		width: 250rpx;
+		height: 100rpx;
+		font-size: 60rpx;
+		font-weight: 800;
+		color: #fff;
+		float: left;
+		margin: 20rpx 20rpx;	
+	}
+	#date_yy{
+		font-size: 30rpx;
+		color: #ccc;
+		margin-top: 20rpx;
+		letter-spacing: 10rpx;
+	}
+	#t_day{
+		position: absolute;
+		right: 0;
+		top:0;
+		width: 100rpx;
+		height: 180rpx;
+		border-radius: 30rpx;
+		background: rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 0 1px hsla(240, 0%, 100%, .3) inset,.1em .3em 1em rgba(0, 0, 0, 0.4);
+		text-align: center;
+		color: #F6C749;
+	}
+	#t_day span{
+		font-size: 28rpx;
+		font-weight: 800;
+		letter-spacing: 10rpx;
+		display: inline-block;
+		height: 100%;
+		writing-mode: vertical-lr;
+	}
+	.gradient text{
+		font-size: 30rpx;
+		letter-spacing: 10rpx;
+		font-weight: 800;	
+	}
+
+	
+	
+	
+
+
+	.image-bg {
+		width: 100%;
+		height: 100%;
+	}
+/*选择*/
+	.nav {
+		position: relative;
+		width: 100%;
+		height: 600rpx;
+		bottom: 0;
+	}
+	.nav_box1{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-89%,-105%) rotate(343deg);
+		width: 300rpx;
+		height: 250rpx;	
+		border-radius: 30rpx;
+		box-shadow: 0 5rpx 20rpx #2122B9;
+		background-color: #2122B9;
+	}
+	.nav_box2{
+		position:absolute;
+	    top:50%;
+	    left: 50%;
+	    transform: translate(-7%,-50%) rotate(10deg);
+		width: 300rpx;
+		height: 250rpx;	
+		border-radius: 30rpx;
+		box-shadow: 0 5rpx 20rpx #F6C542;
+		background-color: #F6C542;
+		background: linear-gradient(247deg,#F6C542 40%,  #f4f8f9 100% );
+		
+	}.nav_box3{
+		z-index: 100;
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		width: 300rpx;
+		height: 250rpx;
+		border-radius: 30rpx;
+		box-shadow: 0 5rpx 20rpx #dddddd;
+		background-color: #E35087;
+		
+	}
+	
+	.nav_box3 text{
+		position: absolute;
+		bottom: 12rpx;
+		left: 50%;
+		white-space: nowrap;
+		transform: translateX(-50%);
+		font-size: 20rpx;
+		font-weight: 800;
+		color: #F6C749;
+	}
+	.co-center{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+		color: #fff;
+		text-align: center;
+		font-size: 120rpx;
+	}
+	.ch-font{
+		position: absolute;
+		bottom: 15rpx;
+		left: 50%;
+		transform: translateX(-50%);
+		color: #fff;
+		font-size: 30rpx;
+		}
+	
+	.mask{
+		position: absolute;
+		top:50%;
+		left: 50%;
+		transform: translate(-80%,17%);
+		width: 320rpx;
+		height: 270rpx;
+		box-shadow:0 25px 50px rgba(0,0,0,0.3);
+		filter:opacity(95%);
+		border-radius: 30rpx;
+		background: rgba(0, 0, 0, 0.2);	
+	}
+
+
+	/* 音乐组件 */
+	@-webkit-keyframes musicRotate {
+		from {
+			-webkit-transformb: rotate(0deg)
+		}
+
+		to {
+			-webkit-transform: rotate(360deg)
+		}
+	}
+
+
+	@-webkit-keyframes musicStop {
+		from {
+			-webkit-transform: rotate(20deg)
+		}
+
+		to {
+			-webkit-transform: rotate(0deg)
+		}
+
+	}
+
+	@-webkit-keyframes musicStart {
+		from {
+			-webkit-transform: rotate(0deg)
+		}
+
+		to {
+			-webkit-transform: rotate(20deg)
+		}
+	}
+	.small_blue{
+		position: absolute;
+		transform: translate(399%,360%);
+		right: 50%;
+		top: 50%;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #484EB5;
+		filter: blur(2px);
+	}
+	.yellow_circular{
+		position: absolute;
+		transform: translate(500%,-514%);
+		right: 50%;
+		top: 50%;
+		width: 50rpx;
+		height: 50rpx;
+		border-radius: 50%;
+		background-color: #F6C542;
+		filter: blur(2px);
+	}
+    .blue_circular{position: absolute;
+		transform: translate(228%,-239%);
+		right: 50%;
+		top: 50%;
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+		background-color:#484EB5 ;
+		filter: blur(1px);
+	}
+	.bg_music {
+		position: absolute;
+		transform: translate(228%,-239%);
+		right: 50%;
+		top: 50%;
+		width: 100rpx;
+		height: 100rpx;
+		border-radius: 50%;
+		z-index: 99;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.musicImg {
+		width: 60rpx;
+		height: 60rpx;
+	}
+
+	.music_icon {
+		animation: musicRotate 3s linear infinite;
+	}
+
+	.music_play {
+		width: 28rpx;
+		height: 60rpx;
+		margin-left: -10rpx;
+		transform-origin: top;
+		-webkit-transform: rotate(20deg);
+	}
+
+	.playImg {
+		animation: musicStop 1s linear forwards;
+	}
+
+	.pauseImg {
+		animation: musicStart 1s linear forwards;
+	}
+
+	#myAudio {
+		display: none;
+	}

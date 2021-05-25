@@ -2,11 +2,20 @@
   "pages": [
     "pages/index/index",
     "pages/painting/painting",
+<<<<<<< HEAD
     "pages/user/user"
+=======
+    "pages/user/user",
+    "pages/timeline/timeline1",
+    "pages/timeline/timeline",
+    "pages/user/feedback",
+    "pages/user/licence"
+>>>>>>> 7d72864 (ui设计)
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "black",
+<<<<<<< HEAD
     "navigationBarTitleText": "思维跳动",
     "navigationBarBackgroundColor": "#F1F1F1"
   },
@@ -34,6 +43,39 @@
       }
     ]
   },
+=======
+    "navigationBarTitleText": "Thinking Beat思维跳跃",
+    "navigationBarBackgroundColor": "#5B4CB1",
+    "backgroundColor": "#f4f8f9"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#b7eff9",
+    "borderStyle": "black",
+    "backgroundColor": "#5B4CB1",
+    "list": [
+      {
+        "pagePath": "pages/painting/painting",
+        "iconPath": "static/icon/draw1.png",
+        "selectedIconPath": "static/icon/draw2.png",
+        "text": "画板"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/icon/home1.png",
+        "selectedIconPath": "static/icon/home2.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "static/icon/my1.png",
+        "selectedIconPath": "static/icon/my2.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {},
+>>>>>>> 7d72864 (ui设计)
   "usingComponents": {},
   "sitemapLocation": "sitemap.json"
 }

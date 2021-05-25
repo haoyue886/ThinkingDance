@@ -11,9 +11,15 @@
 /* 9 */,
 /* 10 */,
 /* 11 */
+<<<<<<< HEAD
 /*!********************************************************************************************************!*\
   !*** C:/Users/17623/Documents/HBuilderProjects/Thinking beat/main.js?{"page":"pages%2Findex%2Findex"} ***!
   \********************************************************************************************************/
+=======
+/*!*****************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  \*****************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26,9 +32,15 @@ createPage(_index.default);
 
 /***/ }),
 /* 12 */
+<<<<<<< HEAD
 /*!*************************************************************************************!*\
   !*** C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue ***!
   \*************************************************************************************/
+=======
+/*!**********************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue ***!
+  \**********************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66,9 +78,15 @@ component.options.__file = "pages/index/index.vue"
 
 /***/ }),
 /* 13 */
+<<<<<<< HEAD
 /*!********************************************************************************************************************!*\
   !*** C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue?vue&type=template&id=57280228& ***!
   \********************************************************************************************************************/
+=======
+/*!*****************************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \*****************************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87,9 +105,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 14 */
+<<<<<<< HEAD
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue?vue&type=template&id=57280228& ***!
   \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+=======
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -113,9 +137,15 @@ render._withStripped = true
 
 /***/ }),
 /* 15 */
+<<<<<<< HEAD
 /*!**************************************************************************************************************!*\
   !*** C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************/
+=======
+/*!***********************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -128,13 +158,20 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 16 */
+<<<<<<< HEAD
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue?vue&type=script&lang=js& ***!
   \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+=======
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
+<<<<<<< HEAD
 Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
@@ -159,6 +196,206 @@ var _default =
 /*!**********************************************************************************************************************!*\
   !*** C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
   \**********************************************************************************************************************/
+=======
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var carousel = function carousel() {__webpack_require__.e(/*! require.ensure | components/vear-carousel/vear-carousel */ "components/vear-carousel/vear-carousel").then((function () {return resolve(__webpack_require__(/*! @/components/vear-carousel/vear-carousel */ 74));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  components: {
+    carousel: carousel,
+    Tabbar: Tabbar },
+
+  data: function data() {
+    return {
+      // 自定义tabbar页面展示
+      show: false,
+      // 轮播图
+      imgList: [{
+        url: 'https://img9.51tietu.net/pic/2019-091200/vgkpidei2tjvgkpidei2tj.jpg',
+        id: 1 },
+      {
+        url: 'https://img9.51tietu.net/pic/2019-091200/euzekmi5m23euzekmi5m23.jpg',
+        id: 2 },
+      {
+        url: 'https://img9.51tietu.net/pic/2019-091200/143tt0ta4sr143tt0ta4sr.jpg',
+        id: 3 },
+      {
+        url: 'https://img9.51tietu.net/pic/2019-091200/ff1vqwm3q33ff1vqwm3q33.jpg',
+        id: 4 }],
+
+      'pass': '7',
+      'date_d': '00',
+      'date_y': '2020',
+      'date_m': 'Aay',
+      'date_day': '星期一',
+      isPlay: true,
+      audioCtx: '' };
+
+  },
+  onLoad: function onLoad() {
+    this.gotoTimeline();
+    this.getTime(this);
+    var that = this;
+    that.audioCtx = uni.createAudioContext('myAudio');
+    //that.getMusicUrl()
+  },
+  onShow: function onShow() {
+    // console.log('11111',calendar)
+    var that = this;
+    that.isPlay = true;
+    //that.getMusicUrl()
+  },
+
+  methods: {
+    // 自定义页面
+    switchDialog: function switchDialog() {
+      var bool = this.show;
+      this.setData({
+        show: !bool });
+
+    },
+    // 轮播图
+    selectedBanner: function selectedBanner(item, index) {
+      console.log('🥒', item, index);
+    },
+    feedback: function feedback() {
+      uni.navigateTo({
+        url: '/pages/user/feedback' });
+
+    },
+    // 导航跳转
+    gotoTimeline: function gotoTimeline() {
+      uni.navigateTo({
+        url: '../timeline/timeline' });
+
+    },
+    //获取当前时间
+    getTime: function getTime() {
+      var date = new Date();
+
+      var y = date.getFullYear();
+
+      var m = date.getMonth();
+      m = m + 1;
+
+      var d = date.getDate();
+      d = d < 10 ? '0' + d : d; //天补0
+
+      var dd = date.getDay();
+      switch (dd) {
+        case 0:
+          dd = '星期一';
+          break;
+        case 1:
+          dd = '星期二';
+          break;
+        case 2:
+          dd = '星期三';
+          break;
+        case 3:
+          dd = '星期四';
+          break;
+        case 4:
+          dd = '星期五';
+          break;
+        case 5:
+          dd = '星期六';
+          break;
+        case 6:
+          dd = '星期日';
+          break;}
+
+      this.date_d = d;
+      this.date_y = y;
+      this.date_m = m;
+      this.date_day = dd;
+    },
+    audioPlay: function audioPlay() {
+      var that = this;
+      if (that.isPlay) {
+        that.audioCtx.pause();
+        that.isPlay = !that.isPlay;
+        tools.showToast('您已暂停音乐播放~');
+      } else {
+        that.audioCtx.play();
+        that.isPlay = !that.isPlay;
+        tools.showToast('背景音乐已开启~');
+      }
+    }
+    // 从云数据库获取音乐
+    /*getMusicUrl: function() {
+    	const that = this
+    	const db = uni.cloud.database()
+    	const music = db.collection('music')
+    	music.get().then(res => {
+    		that.audioUrl = res.data[0].musicUrl
+    		that.audioCtx.loop = true
+    		that.audioCtx.play()
+    	})
+    },*/ } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
+
+/***/ }),
+/* 17 */
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -171,9 +408,15 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 18 */
+<<<<<<< HEAD
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Documents/HBuilderProjects/Thinking beat/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
   \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+=======
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+>>>>>>> 7d72864 (ui设计)
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -1,3 +1,13 @@
 {
+<<<<<<< HEAD
   "usingComponents": {}
+=======
+  "navigationBarTitleText": "Thinking Dance思维跳动",
+  "backgroundColor": "#efefef",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "carousel": "/components/vear-carousel/vear-carousel",
+    "tabbar": "/components/tabbar/tabbar"
+  }
+>>>>>>> 7d72864 (ui设计)
 }

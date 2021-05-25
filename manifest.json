@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
     "name" : "Thinking beat",
+=======
+    "name" : "thinking beat思维跳动",
+>>>>>>> 7d72864 (ui设计)
     "appid" : "",
     "description" : "",
     "versionName" : "1.0.0",
@@ -8,7 +12,11 @@
     /* 5+App特有相关 */
     "app-plus" : {
         "usingComponents" : true,
+<<<<<<< HEAD
 		"nvueStyleCompiler" : "uni-app",
+=======
+        "nvueStyleCompiler" : "uni-app",
+>>>>>>> 7d72864 (ui设计)
         "compilerVersion" : 3,
         "splashscreen" : {
             "alwaysShowBeforeRender" : true,
@@ -50,11 +58,22 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
+<<<<<<< HEAD
         "appid" : "",
         "setting" : {
             "urlCheck" : false
         },
         "usingComponents" : true
+=======
+        "appid" : "wx6b5315957dc28a1e",
+        "setting" : {
+            "urlCheck" : false,
+            "es6" : false,
+            "postcss" : false
+        },
+        "usingComponents" : true,
+        "permission" : {}
+>>>>>>> 7d72864 (ui设计)
     },
     "mp-alipay" : {
         "usingComponents" : true
@@ -65,7 +84,12 @@
     "mp-toutiao" : {
         "usingComponents" : true
     },
+<<<<<<< HEAD
     "uniStatistics": {  
         "enable": false
+=======
+    "uniStatistics" : {
+        "enable" : false
+>>>>>>> 7d72864 (ui设计)
     }
 }
