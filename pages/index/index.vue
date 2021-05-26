@@ -7,7 +7,7 @@
 		<!-- 搜索框 -->
 		<view id="toSearch">
 			<input type="text" placeholder="输入关键字查询..." confirm-type="search">
-			<image src="../../static/icon/search.png" id="search_img"></image>
+			<image src="../../static/images/search.png" id="search_img"></image>
 		</view>
 		<!-- 内容 -->
 		<view class="nav">
@@ -34,12 +34,9 @@
 				<view class="mask">
 					<view class="nav_box3 ">
 						<view id="t_date">
-							<view>{{date_m}} / {{date_d}}</view>
-							<view id="date_yy">{{date_y}}</view>
+							<view>{{date_m}}月{{date_d}}日</view>
 						</view>
 						<view id="t_day"><span>{{date_day}}</span></view>
-						<text>[您的思维累积活跃{{pass}}次]</text>
-				
 					</view>
 				</view>
 
@@ -67,16 +64,16 @@
 				show: false,
 				// 轮播图
 				imgList: [{
-					url: 'https://img9.51tietu.net/pic/2019-091200/vgkpidei2tjvgkpidei2tj.jpg',
+					url: 'https://pcsdata.baidu.com/thumbnail/e69230404g9983290a2c9891f4fdc83a?fid=3159939267-16051585-179369120847406&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-cJNByhVW4s5%2Bx5yxQhY4rWuhfOs%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2427659356&dp-callid=0&time=1622016000&size=c1600_u1600&quality=100&vuk=-&ft=video',
 					id: 1
 				}, {
-					url: 'https://img9.51tietu.net/pic/2019-091200/euzekmi5m23euzekmi5m23.jpg',
+					url: 'https://pcsdata.baidu.com/thumbnail/f7a624803k0ef1627ed5e980cb36172c?fid=3159939267-16051585-101544136594303&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-6T10O1VNmtyb4ZU8AkKy3%2FNAAi8%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2637449066&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
 					id: 2
 				}, {
-					url: 'https://img9.51tietu.net/pic/2019-091200/143tt0ta4sr143tt0ta4sr.jpg',
+					url: 'https://pcsdata.baidu.com/thumbnail/ccbd3d9f5l4edc0cf7c3482cf9daba82?fid=3159939267-16051585-1038846611864731&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-C58bswc4uV93wM4v5aOH5YIB%2Fuw%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2664185888&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
 					id: 3
 				}, {
-					url: 'https://img9.51tietu.net/pic/2019-091200/ff1vqwm3q33ff1vqwm3q33.jpg',
+					url: 'https://pcsdata.baidu.com/thumbnail/0b6a2ee1cv7aec478e119f615a9b65d4?fid=3159939267-16051585-995592652578382&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-TH7Jr1o7oJiSibX3uL%2B%2FKgGr7K8%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2609422452&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
 					id: 4
 				}, ],
 				'pass': '7',

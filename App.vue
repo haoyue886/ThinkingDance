@@ -23,6 +23,5 @@
 	/*每个页面公共css */
 	@import url("./colorui/icon.css");
 	@import url("./colorui/main.css");
-	@import url("./colorui/animation.css");
 	@import url("static/style/iconfont.css");
 </style>

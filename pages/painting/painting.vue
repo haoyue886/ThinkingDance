@@ -19,7 +19,7 @@
 					<view class="t_tool iconfont icon-ico-forward"></view>
 				</view>
 				<view id="top_tool_3">
-					<view class="t_tool cuIcon-close" @click="clear()"></view>
+					<view class="t_tool cuIcon-close fs" @click="clear()"></view>
 				</view>
 			</view>
 			<!-- 画布 -->

@@ -11,9 +11,9 @@
 /* 9 */,
 /* 10 */,
 /* 11 */
-/*!*****************************************************************************************!*\
-  !*** C:/Users/17623/Desktop/thinking beat思维跳动/main.js?{"page":"pages%2Findex%2Findex"} ***!
-  \*****************************************************************************************/
+/*!**********************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -26,9 +26,9 @@ createPage(_index.default);
 
 /***/ }),
 /* 12 */
-/*!**********************************************************************!*\
-  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue ***!
-  \**********************************************************************/
+/*!***************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue ***!
+  \***************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -66,9 +66,9 @@ component.options.__file = "pages/index/index.vue"
 
 /***/ }),
 /* 13 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=template&id=57280228& ***!
-  \*****************************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \**********************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -87,9 +87,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 14 */
-/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=template&id=57280228& ***!
-  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--16-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-uni-app-loader/page-meta.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue?vue&type=template&id=57280228& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns, recyclableRender, components */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -113,9 +113,9 @@ render._withStripped = true
 
 /***/ }),
 /* 15 */
-/*!***********************************************************************************************!*\
-  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \***********************************************************************************************/
+/*!****************************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -128,17 +128,14 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 16 */
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=script&lang=js& ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var carousel = function carousel() {__webpack_require__.e(/*! require.ensure | components/vear-carousel/vear-carousel */ "components/vear-carousel/vear-carousel").then((function () {return resolve(__webpack_require__(/*! @/components/vear-carousel/vear-carousel */ 74));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
-
-
-
 
 
 
@@ -204,16 +201,16 @@ __webpack_require__.r(__webpack_exports__);
       show: false,
       // 轮播图
       imgList: [{
-        url: 'https://img9.51tietu.net/pic/2019-091200/vgkpidei2tjvgkpidei2tj.jpg',
+        url: 'https://pcsdata.baidu.com/thumbnail/e69230404g9983290a2c9891f4fdc83a?fid=3159939267-16051585-179369120847406&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-cJNByhVW4s5%2Bx5yxQhY4rWuhfOs%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2427659356&dp-callid=0&time=1622016000&size=c1600_u1600&quality=100&vuk=-&ft=video',
         id: 1 },
       {
-        url: 'https://img9.51tietu.net/pic/2019-091200/euzekmi5m23euzekmi5m23.jpg',
+        url: 'https://pcsdata.baidu.com/thumbnail/f7a624803k0ef1627ed5e980cb36172c?fid=3159939267-16051585-101544136594303&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-6T10O1VNmtyb4ZU8AkKy3%2FNAAi8%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2637449066&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
         id: 2 },
       {
-        url: 'https://img9.51tietu.net/pic/2019-091200/143tt0ta4sr143tt0ta4sr.jpg',
+        url: 'https://pcsdata.baidu.com/thumbnail/ccbd3d9f5l4edc0cf7c3482cf9daba82?fid=3159939267-16051585-1038846611864731&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-C58bswc4uV93wM4v5aOH5YIB%2Fuw%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2664185888&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
         id: 3 },
       {
-        url: 'https://img9.51tietu.net/pic/2019-091200/ff1vqwm3q33ff1vqwm3q33.jpg',
+        url: 'https://pcsdata.baidu.com/thumbnail/0b6a2ee1cv7aec478e119f615a9b65d4?fid=3159939267-16051585-995592652578382&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-TH7Jr1o7oJiSibX3uL%2B%2FKgGr7K8%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2609422452&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
         id: 4 }],
 
       'pass': '7',
@@ -330,9 +327,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 17 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
-  \*******************************************************************************************************/
+/*!************************************************************************************************************!*\
+  !*** C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -345,9 +342,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 /* 18 */
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/mini-css-extract-plugin/dist/loader.js??ref--6-oneOf-1-0!./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-1-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--6-oneOf-1-2!./node_modules/postcss-loader/src??ref--6-oneOf-1-3!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/index/index.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

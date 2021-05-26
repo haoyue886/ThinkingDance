@@ -23,25 +23,24 @@
     "list": [
       {
         "pagePath": "pages/painting/painting",
-        "iconPath": "static/icon/draw1.png",
-        "selectedIconPath": "static/icon/draw2.png",
+        "iconPath": "static/images/huaban.png",
+        "selectedIconPath": "static/images/huaban.png",
         "text": "画板"
       },
       {
         "pagePath": "pages/index/index",
-        "iconPath": "static/icon/home1.png",
-        "selectedIconPath": "static/icon/home2.png",
+        "iconPath": "static/images/house.png",
+        "selectedIconPath": "static/images/house.png",
         "text": "首页"
       },
       {
         "pagePath": "pages/user/user",
-        "iconPath": "static/icon/my1.png",
-        "selectedIconPath": "static/icon/my2.png",
+        "iconPath": "static/images/user.png",
+        "selectedIconPath": "static/images/user.png",
         "text": "我的"
       }
     ]
   },
   "permission": {},
-  "usingComponents": {},
-  "sitemapLocation": "sitemap.json"
+  "usingComponents": {}
 }
