@@ -138,8 +138,7 @@
 
 <style>
 	    @import "../../colorui/main.css";
-	    @import "../../colorui/icon.css";
-		
+	    @import "../../colorui/icon.css";	
 		@import url("../../static/style/timeline.css");
 	
 	
