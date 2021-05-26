@@ -1,74 +1,78 @@
 <template>
-<view id="contentDiv" >
-		<view class="cu-timeline" v-for="(item,index) in dayList" :key="index" @click="to_today" >
+<view id="contentDiv">
+	<view id="top_text">
+		你一共记录了 {{len}} 条灵感。
+	</view>
+		<view class="cu-timeline" v-for="(item,index) in dayList" :key="index" >
 			<view class="cu-time" >
-			<text>{{item.month}}月{{item.day}},{{item.year}}</text>
+			<text>{{item.ltime.toISOString().slice(0, 10)}}</text>
 			</view>
-			<view class="cu-item cur cuIcon-time">
-				<view v-if="!memorys[item.dt]" class="content light shadow-blur" :class="colors[item.random1]">
-					<text>{{lang =='cn'? '记录你的奇思妙想':'Record your ideas'}}</text>
+			<view class="cu-item cur cuIcon-time" @click="gotoAddnotes(index)">
+				<view class="content light shadow-blur" >
+					<text>{{item.details}}</text>
 				</view>
-				<!-- 查看图片 -->
-				<view v-if="memorys[item.dt]" class="padding">
-					<image class="radius h160" :src="memorys[item.dt].headImage" mode="aspectFill" @click.stop="view_head_image(memorys[item.dt].headImage)"></image>
-				</view>
-				<view v-if="memorys[item.dt]" class="content light shadow-blur" :class="colors[item.random1]">
-					<text>{{memorys[item.dt].content}}</text>
-				</view>
-				
 			</view>
 		</view>
 </view>
 </template>
 
+
+
+
+
+
+
+
+
+
 <script>
 	export default{
 		data:function(){
 			return{
-				lang:uni.getStorageSync('lang'),
+				userid:'',
 				dayList:[],
-				colors:['bg-gradual-red','bg-gradual-orange','bg-gradual-green','bg-gradual-blue','bg-gradual-purple','bg-gradual-pink'],
 				memorys:{},
+				len:0
 			}
 		},
+		onLoad() {
+			this.get_list();
+		},
 		methods:{
-			navigator:function(){
-				this.$emit('itemClick')
+			gotoAddnotes:function(e){
+				var that = this;
+				that.noteid = e;
+				var nid = JSON.stringify(that.noteid);
+				uni.navigateTo({
+					url:'../addnotes/addnotes?nid='+nid
+				})
 			},
-	        to_today:function(item){
-	        	// yyyy--mm--dd
-	        	uni.setStorageSync('today',this.util.format(item.date.getTime(),true))
-	        	// 转跳详情页vue
-	        	// uni.redirectTo({ 
-	        	// 	url:'/pages/../..'
-	        	// })
-				
-	        },
-			// 获取日历
-			get_dayList:function(){
-				let that = this;
-				let start = new Date();
-				
-				// if(this.dayList.length !=0){
-				// 	start = new Date(this.dayList[0].date.getTime() - 24*60*60*1000);
-				// }
-				for(let i = 0;i < 5;i++){
-					// let temp = new Date(start.getTime() - i*24*60*60*1000);
-					let ts = {
-						// dt:this.util.format(temp.getTime(),true),
-						// date:temp,
-						year:start.getFullYear(),
-						month:start.getMonth()+1,
-						day:start.getDate()-i,
-						// week:this.util.getShortWeek(temp.getDay()),
-						random1:Math.floor(Math.random()*6)
-					}
-					console.log(ts)
-					that.dayList.unshift(ts);
+			get_list:function(){
+				if(uni.getStorageSync('isCanUse')){
+					this.userid = uni.getStorageSync('isCanUse');
+					console.log(this.userid);
+				}else{
+					uni.showToast({
+						title:'尚未登录，无法查看你的时间轴',
+						icon: 'none',    //如果要纯文本，不要icon，将值设为'none'
+						duration: 3000 
+					})
 				}
-				console.log(that.dayList)
-				return;
-				// 用户已登录 请求日历列表
+				
+				var self = this
+				const db = wx.cloud.database({})
+				db.collection('notes').where({
+					_openid : self.userid
+				}).orderBy('ltime','desc').get({
+					success:function(res){
+						console.log("成功获取用户时间轴列表",res.data);
+						self.dayList = res.data;
+						self.len = res.data.length;
+					}
+				})
+			},
+			
+/*				// 用户已登录 请求日历列表
 				if(uni.getStorageSync('user')){
 					uni.request({
 						url:this.host +'/today/getMemoryList.html',
@@ -93,13 +97,13 @@
 					}
 					)
 				}
-			},
-			// 查看图片大图
+			},  */
+	/*		// 查看图片大图
 			view_head_image:function(){
 				this.util.to_view_image(0,[img])
-			},
+			},*/
 			// 加载进入页面最底部
-		to_bottom:function(){
+	/*	to_bottom:function(){
 				this.$nextTick(() =>{
 					// 数据绑定后计算元素高度
 					let contentDiv = uni.createSelectorQuery().select("#contentDiv");
@@ -110,29 +114,33 @@
 						})
 					}).exec();			
 				})			
-			}
-		},
-	    onLoad:function(){
-			// 加载当天日期
-			this.get_dayList();
-			this.to_bottom();
-		},
-		onShow:function(){
-			// 页面展示时获取语言
-			this.lang = uni.getStorageSync('lang');
-		},
+			}   */
+		},   
 		onPullDownRefresh:function(){
-			this.get_dayList();
 			uni.stopPullDownRefresh();
 		}
 	}
 </script>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <style>
 	    @import "../../colorui/main.css";
 	    @import "../../colorui/icon.css";
 		
-	.cu-timeline .cu-time{
-		width:100px;
-	}
+		@import url("../../static/style/timeline.css");
+	
+	
 </style>

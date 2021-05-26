@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 75));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -202,10 +202,10 @@ __webpack_require__.r(__webpack_exports__);
       uerInfo: [],
       code: '',
       OpenId: '',
-      nickName: '请点击登录',
+      nickName: '点击登录',
       avatarUrl: "../../static/images/default.png",
-      isCanUse: uni.getStorageSync('isCanUse') || true //默认为true
-    };
+      isCanUse: '' };
+
   },
   onLoad: function onLoad() {
     this.getUserInfo();
@@ -219,43 +219,59 @@ __webpack_require__.r(__webpack_exports__);
 
     },
     //微信授权登录
-    getUserInfo: function getUserInfo() {
-
+    getUserInfo: function getUserInfo() {// 获取用户信息
       var db = wx.cloud.database({}); //配置云数据库
+      var that = this;
+      wx.login({
+        success: function success(res) {
+          that.code = res.code;
+          console.log("获取code", res.code);
+        } });
 
-      var _this = this;
-      uni.getUserInfo({
-        provider: 'weixin', //选择微信环境
-        success: function success(infoRes) {
-          console.log("成功 用户信息", infoRes.userInfo);
-          _this.nickName = infoRes.userInfo.nickName; //获取昵称
-          _this.avatarUrl = infoRes.userInfo.avatarUrl; //获取头像
+      uni.getUserProfile({
+        desc: '登录',
+        success: function success(res) {
+          console.log("成功 用户信息", res.userInfo);
+          that.nickName = res.userInfo.nickName; //获取昵称
+          that.avatarUrl = res.userInfo.avatarUrl; //获取头像
+          uni.getStorageSync('isCanUse', res.userInfo._openid);
+
+          uni.showToast({
+            title: '登录成功' });
+
+
           db.collection('user').add({ //存入云数据库
             data: {
+              username: res.userInfo.nickName,
+              useravatarurl: res.userInfo.avatarUrl,
+              usergender: res.userInfo.gender } });
 
-              username: infoRes.userInfo.nickName,
-              useravatarurl: infoRes.userInfo.avatarUrl,
-              usergender: infoRes.userInfo.gender } });
 
+          db.collection('user').where({
+            username: that.nickName }).
+          get({
+            success: function success(re) {
+              console.log(re.data[0]._openid);
+              uni.setStorageSync('isCanUse', re.data[0]._openid);
+            } });
 
-          try {
-            uni.setStorageSync('isCanUse', false); //记录是否第一次授权  false:表示不是第一次授权
-          } catch (e) {
-            console.log("错误", e);
-          }
         },
         fail: function fail(res) {
-          console.log("错误", res);
+          console.log(res);
         } });
 
     },
     //登录
 
     feedback: function feedback() {
-      uni.navigateTo({ url: '/pages/user/feedback' });
+      uni.navigateTo({
+        url: '/pages/user/feedback' });
+
     },
     licence: function licence() {
-      uni.navigateTo({ url: '/pages/user/licence' });
+      uni.navigateTo({
+        url: '/pages/user/licence' });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 

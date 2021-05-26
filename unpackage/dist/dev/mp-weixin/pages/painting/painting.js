@@ -130,7 +130,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _methods;function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;} //
 //
 //
 //
@@ -191,7 +191,7 @@ __webpack_require__.r(__webpack_exports__);
 //import Mycanvas from "../../static/js/theCanvas.js";
 
 var x = 0;
-var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 75));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {
@@ -201,7 +201,7 @@ var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensu
     return {
       // 自定义tabbar页面展示
       show: false,
-      // flag:false,
+      flag: false,
       myPen_flag: false,
       'date_d': '00',
       'date_y': '2020',
@@ -266,143 +266,145 @@ var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensu
     this.getTime(this);
 
     this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
-
+    this.clear();
+    this.showTools();
   },
 
-  methods: {
-
-    // 自定义页面
+  methods: (_methods = {
+    showTools: function showTools() {
+      this.flag = !this.flag;
+    },
+    mPen: function mPen() {
+      this.myPen_flag = !this.myPen_flag;
+    },
+    // 自定义tabbar页面展示
     switchDialog: function switchDialog() {
       var bool = this.show;
       this.setData({
         show: !bool });
 
-    },
+    } }, _defineProperty(_methods, "mPen", function mPen()
+
+  {
+    this.myPen_flag = !this.myPen_flag;
+  }), _defineProperty(_methods, "getTime", function getTime()
+
+  {
+    var date = new Date();
+
+    var y = date.getFullYear();
+
+    var m = date.getMonth();
+    switch (m) {
+      case 0:
+        m = '1';
+        break;
+      case 1:
+        m = '2';
+        break;
+      case 2:
+        m = '3';
+        break;
+      case 3:
+        m = '4';
+        break;
+      case 4:
+        m = '5';
+        break;
+      case 5:
+        m = '6';
+        break;
+      case 6:
+        m = '7';
+        break;
+      case 7:
+        m = '8';
+        break;
+      case 8:
+        m = '9';
+        break;
+      case 9:
+        m = '10';
+        break;
+      case 10:
+        m = '11';
+        break;
+      case 11:
+        m = '12';
+        break;}
 
 
-    // showTools(){
-    // 	this.flag = !this.flag;
-    // },
-    mPen: function mPen() {
-      this.myPen_flag = !this.myPen_flag;
-    },
-    //获取当前时间
-    getTime: function getTime() {
-      var date = new Date();
+    var d = date.getDate();
+    d = d < 10 ? '0' + d : d; //天补0
 
-      var y = date.getFullYear();
-
-      var m = date.getMonth();
-      switch (m) {
-        case 0:
-          m = '1';
-          break;
-        case 1:
-          m = '2';
-          break;
-        case 2:
-          m = '3';
-          break;
-        case 3:
-          m = '4';
-          break;
-        case 4:
-          m = '5';
-          break;
-        case 5:
-          m = '6';
-          break;
-        case 6:
-          m = '7';
-          break;
-        case 7:
-          m = '8';
-          break;
-        case 8:
-          m = '9';
-          break;
-        case 9:
-          m = '10';
-          break;
-        case 10:
-          m = '11';
-          break;
-        case 11:
-          m = '12';
-          break;}
+    this.date_d = d;
+    this.date_y = y;
+    this.date_m = m;
+  }), _defineProperty(_methods, "tstart", function tstart(
 
 
-      var d = date.getDate();
-      d = d < 10 ? '0' + d : d; //天补0
 
-      this.date_d = d;
-      this.date_y = y;
-      this.date_m = m;
-    },
+  e) {
+    var startX = e.changedTouches[0].x;
+    var startY = e.changedTouches[0].y;
+    var sPoint = {
+      X: startX,
+      Y: startY };
 
-    //绘制功能
-    //开始触摸，获取起点
-    tstart: function tstart(e) {
-      var startX = e.changedTouches[0].x;
-      var startY = e.changedTouches[0].y;
-      var sPoint = {
-        X: startX,
-        Y: startY };
+    this.point.push(sPoint);
+    this.ctx.beginPath();
+  }), _defineProperty(_methods, "tmove", function tmove(
 
-      this.point.push(sPoint);
-      this.ctx.beginPath();
-    },
-    //移动手势
-    tmove: function tmove(e) {
-      var moveX = e.changedTouches[0].x;
-      var moveY = e.changedTouches[0].y;
-      var movePoint = {
-        X: moveX,
-        Y: moveY };
+  e) {
+    var moveX = e.changedTouches[0].x;
+    var moveY = e.changedTouches[0].y;
+    var movePoint = {
+      X: moveX,
+      Y: moveY };
 
-      this.point.push(movePoint); //存点
-      if (this.point.length >= 2) {
-        this.draw(); //绘制路径
-      }
-    },
-    //停止手势
-    tend: function tend() {
-      this.point = [];
-    },
-    //触摸取消
+    this.point.push(movePoint); //存点
+    if (this.point.length >= 2) {
+      this.draw(); //绘制路径
+    }
+  }), _defineProperty(_methods, "tend", function tend()
 
-    //绘制
-    draw: function draw() {
-      var point1 = this.point[0];
-      var point2 = this.point[1];
-      this.point.shift();
-      // console.log(JSON.stringify(touchs))
-      this.ctx.moveTo(point1.X, point1.Y);
-      this.ctx.lineTo(point2.X, point2.Y);
-      this.ctx.stroke();
-      this.ctx.draw(true);
-    },
-    //清除
-    clear: function clear() {
-      var that = this;
-      uni.getSystemInfo({
-        success: function success(res) {
-          var canvasw = res.windowWidth;
-          var canvash = res.windowHeight;
-          that.ctx.clearRect(0, 0, canvasw, canvash);
-          that.ctx.draw(true);
-        } });
+  {
+    this.point = [];
+  }), _defineProperty(_methods, "draw",
 
-    },
-    //选择画笔颜色
-    updateColor: function updateColor(color) {
-      console.log(color);
-      this.ctx.strokeStyle = color;
-    },
-    updateThick: function updateThick(thickness) {
-      console.log(thickness);
-      this.ctx.lineWidth = thickness / 10;
-    } } };exports.default = _default;
+
+
+  function draw() {
+    var point1 = this.point[0];
+    var point2 = this.point[1];
+    this.point.shift();
+    // console.log(JSON.stringify(touchs))
+    this.ctx.moveTo(point1.X, point1.Y);
+    this.ctx.lineTo(point2.X, point2.Y);
+    this.ctx.stroke();
+    this.ctx.draw(true);
+  }), _defineProperty(_methods, "clear",
+
+  function clear() {
+    var that = this;
+    uni.getSystemInfo({
+      success: function success(res) {
+        var canvasw = res.windowWidth;
+        var canvash = res.windowHeight;
+        that.ctx.clearRect(0, 0, canvasw, canvash);
+        that.ctx.draw(true);
+      } });
+
+  }), _defineProperty(_methods, "updateColor",
+
+  function updateColor(color) {
+    console.log(color);
+    this.ctx.strokeStyle = color;
+  }), _defineProperty(_methods, "updateThick",
+  function updateThick(thickness) {
+    console.log(thickness);
+    this.ctx.lineWidth = thickness / 10;
+  }), _methods) };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

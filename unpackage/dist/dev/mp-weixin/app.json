@@ -3,9 +3,10 @@
     "pages/index/index",
     "pages/painting/painting",
     "pages/user/user",
-    "pages/timeline/timeline1",
     "pages/timeline/timeline",
     "pages/user/feedback",
+    "pages/addnotes/addnotes",
+    "pages/notes/notes",
     "pages/user/licence"
   ],
   "subPackages": [],
@@ -42,5 +43,6 @@
     ]
   },
   "permission": {},
-  "usingComponents": {}
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
 }

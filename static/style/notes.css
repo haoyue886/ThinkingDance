@@ -1,0 +1,110 @@
+page{
+	/* background: linear-gradient(to top,#ffffff,#f9f0e7); */
+}
+.time{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:3rpx 0;
+  color: #888888;
+}
+
+.title{
+  font-weight:bold;
+  background-color: white;
+  height: 20rpx;
+}
+
+.inputclass{
+  font-weight: bold;
+  width: 90%;
+  color: black;
+  font-size: 20rpx;
+  padding: 0 30rpx;
+}
+
+.yuyinWrap {
+  position: relative;
+  margin-top:20rpx;
+}
+ 
+.yuyinCon {
+  width: 100%;
+  background-color: white;
+  font-size: 17rpx;
+}
+ 
+.yuyin {
+  position: absolute;
+  bottom: 0;
+  left: 48rpx;
+  font-size: 36rpx;
+  color: #999;
+}
+ 
+.yuyin icon.iconfont {
+  font-size: 34rpx;
+  padding: 0 17rpx 15rpx;
+  border-radius: 50%;
+  background: #73dbef;
+  margin-right: 14rpx;
+  color: #fff;
+}
+ 
+.consultYuyin {
+  height: 100%;
+  width: 90%;
+}
+ 
+.icon-jianpan1 {
+  position: absolute;
+  left: 10rpx;
+  bottom: 6px;
+  color: #606267;
+  font-size: 60rpx;
+}
+ 
+.yuyinBtn {
+  width: 70%;
+  height: 70rpx;
+  position: absolute;
+  right: 112rpx;
+  bottom: 12rpx;
+  border: 1px solid #eee;
+  background: #fff;
+  color: #606267;
+  line-height: 62rpx;
+}
+ 
+.yuyinBtnBg {
+  background: #eee;
+}
+ 
+.yuyinBtn::after {
+  /* background: #fff; *//* color: #000; */
+  border-radius: 0;
+  border: none;
+}
+ 
+.startYuyinImage {
+  position: fixed;
+  top: 210rpx;
+  left: 50%;
+  width: 190rpx;
+  height: 240rpx;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 20rpx;
+  color: #fff;
+  text-align: center;
+  margin-left: -95rpx;
+}
+ 
+.startYuyinImage cover-image {
+  margin: 30rpx auto;
+  width: 100rpx;
+  height: 100rpx;
+}
+ 
+.startYuyinImage cover-view {
+  margin-top: 25rpx;
+}

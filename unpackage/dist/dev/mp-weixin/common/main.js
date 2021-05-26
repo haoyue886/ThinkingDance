@@ -90,6 +90,7 @@ __webpack_require__.r(__webpack_exports__);
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   onLaunch: function onLaunch() {
+
     wx.cloud.init({
       env: 'cloud1-8g5ro01u8b306dc8',
       traceUser: true });

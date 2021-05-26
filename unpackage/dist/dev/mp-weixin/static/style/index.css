@@ -17,19 +17,18 @@ page{width: 100%;
 }
 input{
 	position: absolute;
-	/* text-align: left; */
 	left: 20rpx;
 	top: 50%;
 	transform: translateY(-50%);
 	font-size: 20rpx;
 	letter-spacing: 3rpx;
-	/* float: left; */
 }
 
 #search_img{
 	position: absolute;
 	right: 20rpx;
 	top: 50%;
+	transform: translateY(-50%);
 	width: 40rpx;
 	height: 40rpx;
 	float: right;
@@ -52,7 +51,7 @@ input{
 		width: 250rpx;
 		height: 100rpx;
 		font-size: 56rpx;
-		font-weight: 800;
+		font-weight: 1000;
 		color: #E35087;
 		/* float: left; */
 		margin: 20rpx 20rpx;	

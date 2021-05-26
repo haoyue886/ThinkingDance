@@ -27,7 +27,7 @@
 				<view class="co-center cuIcon-time"></view>
 				<text class="ch-font">时间轴</text>
 			</view>
-			<view class="nav_box2 timeline">
+			<view class="nav_box2 "@tap="gotoNotes">
 				<view class="co-center cuIcon-creative"></view>
 				<text class="ch-font">捕捉灵感</text>
 			</view>
@@ -93,13 +93,24 @@
 			//that.getMusicUrl()
 		},
 		onShow: function() {
-			// console.log('11111',calendar)
 			const that = this
 			that.isPlay = true
 			//that.getMusicUrl()
 		},
 
 		methods: {
+			// 导航跳转
+			gotoTimeline() {
+				uni.navigateTo({
+					url: '../timeline/timeline'
+				})
+			},
+				// 导航跳转
+						gotoNotes(){
+							uni.navigateTo({
+								url:'../notes/notes'
+							})
+						},
 			// 自定义页面
 			switchDialog() {
 				let bool = this.show;
@@ -116,12 +127,7 @@
 					url: '/pages/user/feedback'
 				})
 			},
-			// 导航跳转
-			gotoTimeline() {
-				uni.navigateTo({
-					url: '../timeline/timeline'
-				})
-			},
+		
 			//获取当前时间
 			getTime() {
 				let date = new Date();

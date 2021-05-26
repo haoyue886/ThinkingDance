@@ -28,7 +28,7 @@
 
 			<!-- 悬浮工具 -->
 			<view>
-				<!-- <image id="tool_icon" src="../../static/images/tool.png" @click="showTools()"></image> -->
+				
 
 				<view id="tool_box">
 					<view class="cuIcon-down a_tool_1" id="a_tool_1"></view>
@@ -69,7 +69,7 @@
 			return {
 				// 自定义tabbar页面展示
 				show: false,
-				// flag:false,
+				flag:false,
 				myPen_flag: false,
 				'date_d': '00',
 				'date_y': '2020',
@@ -134,12 +134,18 @@
 			this.getTime(this);
 
 			this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
-
+             this.clear();
+             			this.showTools();
 		},
 
 		methods: {
-
-			// 自定义页面
+              	showTools(){
+              				this.flag = !this.flag;
+              			},
+						mPen(){
+										this.myPen_flag = !this.myPen_flag;
+									},
+			// 自定义tabbar页面展示
 			switchDialog() {
 				let bool = this.show;
 				this.setData({
@@ -147,10 +153,6 @@
 				});
 			},
 
-
-			// showTools(){
-			// 	this.flag = !this.flag;
-			// },
 			mPen() {
 				this.myPen_flag = !this.myPen_flag;
 			},

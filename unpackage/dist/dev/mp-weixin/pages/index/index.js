@@ -135,7 +135,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 67));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var carousel = function carousel() {__webpack_require__.e(/*! require.ensure | components/vear-carousel/vear-carousel */ "components/vear-carousel/vear-carousel").then((function () {return resolve(__webpack_require__(/*! @/components/vear-carousel/vear-carousel */ 74));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 75));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var carousel = function carousel() {__webpack_require__.e(/*! require.ensure | components/vear-carousel/vear-carousel */ "components/vear-carousel/vear-carousel").then((function () {return resolve(__webpack_require__(/*! @/components/vear-carousel/vear-carousel */ 82));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 
 
@@ -230,13 +230,24 @@ __webpack_require__.r(__webpack_exports__);
     //that.getMusicUrl()
   },
   onShow: function onShow() {
-    // console.log('11111',calendar)
     var that = this;
     that.isPlay = true;
     //that.getMusicUrl()
   },
 
   methods: {
+    // 导航跳转
+    gotoTimeline: function gotoTimeline() {
+      uni.navigateTo({
+        url: '../timeline/timeline' });
+
+    },
+    // 导航跳转
+    gotoNotes: function gotoNotes() {
+      uni.navigateTo({
+        url: '../notes/notes' });
+
+    },
     // 自定义页面
     switchDialog: function switchDialog() {
       var bool = this.show;
@@ -253,12 +264,7 @@ __webpack_require__.r(__webpack_exports__);
         url: '/pages/user/feedback' });
 
     },
-    // 导航跳转
-    gotoTimeline: function gotoTimeline() {
-      uni.navigateTo({
-        url: '../timeline/timeline' });
 
-    },
     //获取当前时间
     getTime: function getTime() {
       var date = new Date();

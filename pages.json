@@ -11,7 +11,7 @@
 		{
 			"path": "pages/painting/painting",
 			"style": {
-				"navigationBarTitleText": "思维跳跃",
+				"navigationBarTitleText": "灵感画板",
 				"navigationBarTextStyle": "white"
 			}
 		},
@@ -23,13 +23,7 @@
 			}
 		},
 		
-		{
-			"path":"pages/timeline/timeline1",
-			"style":{
-				"navigationBarTitleText":"时间轴",
-				"navigationBarTextStyle": "white"
-			}
-		},
+
 		{
 			"path":"pages/timeline/timeline",
 			"style":{
@@ -42,6 +36,18 @@
 			"style":{
 				"navigationBarTitleText":"反馈",
 				"navigationBarTextStyle": "white"
+			}
+		},
+		{
+			"path": "pages/addnotes/addnotes",
+			"style": {
+				"navigationBarTitleText": "编辑页"
+			}
+		},
+		{
+			"path": "pages/notes/notes",
+			"style": {
+				"navigationBarTitleText": "记录页"
 			}
 		},
 		{
