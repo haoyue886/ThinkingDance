@@ -21,7 +21,8 @@
 				<image src="../../static/images/music_play.png" class="music_play"
 					:class="isPlay?'pauseImg':'playImg'" />
 			</view>
-			<audio id="myAudio" :src="audioUrl" autoplay loop></audio>
+			<audio id="myAudio" ></audio>
+			<!-- <audio id="myAudio" :src="audioUrl" autoplay loop></audio> -->
 			<!-- 导航+日历	 -->
 			<view class="nav_box1" @tap="gotoTimeline">
 				<view class="co-center cuIcon-time"></view>
@@ -86,16 +87,31 @@
 			}
 		},
 		onLoad: function() {
-			this.gotoTimeline();
 			this.getTime(this);
 			const that = this
 			that.audioCtx = uni.createAudioContext('myAudio')
-			//that.getMusicUrl()
+			const innerAudioContext = uni.createInnerAudioContext();
+			innerAudioContext.autoplay = true;
+			innerAudioContext.src = 'https://win-web-rb01-sycdn.kuwo.cn/979f33d22e95aacd336dfc7ee34eb8a6/60af261a/resource/n1/21/38/3371198176.mp3';
+			innerAudioContext.onPlay(() => {
+               const that = this
+				if (that.isPlay) {
+					that.audioCtx.pause()
+					that.isPlay = !that.isPlay
+					tools.showToast('您已暂停音乐播放~')
+				} else {
+					that.audioCtx.play()
+					that.isPlay = !that.isPlay
+					tools.showToast('背景音乐已开启~')
+				}
+			});
 		},
 		onShow: function() {
 			const that = this
 			that.isPlay = true
 			//that.getMusicUrl()
+			let innerAudioContext = uni.createInnerAudioContext()
+			
 		},
 
 		methods: {
@@ -180,18 +196,21 @@
 					that.isPlay = !that.isPlay
 					tools.showToast('背景音乐已开启~')
 				}
-			},
+			}
 			// 从云数据库获取音乐
-			/*getMusicUrl: function() {
-				const that = this
-				const db = uni.cloud.database()
-				const music = db.collection('music')
-				music.get().then(res => {
-					that.audioUrl = res.data[0].musicUrl
-					that.audioCtx.loop = true
-					that.audioCtx.play()
-				})
-			},*/
+			// getMusicUrl: function() {
+			// 	const that = this
+			// 	const db = uni.cloud.database()
+			// 	const music = db.collection('music')
+			// 	music.get().then(res => {
+			// 		that.audioUrl = res.data[0].musicUrl
+			// 		that.audioCtx.loop = true
+			// 		that.audioCtx.play()
+			// 	})
+			// }
+			
+			
+			
 		}
 	}
 </script>

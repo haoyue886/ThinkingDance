@@ -1,5 +1,8 @@
 <template>
 	<view>
+		<!-- 自定义tabbar -->
+		<view class="" v-if="show" @tap="switchDialog"></view>
+		<Tabbar nowIndex="0" @switchDialog="switchDialog"></Tabbar>
 		<!-- 内容区 -->
 		<view class="content">
 			<!-- 左上日期 -->
@@ -28,7 +31,7 @@
 
 			<!-- 悬浮工具 -->
 			<view>
-				
+
 
 				<view id="tool_box">
 					<view class="cuIcon-down a_tool_1" id="a_tool_1"></view>
@@ -49,9 +52,7 @@
 				</view>
 			</view>
 		</view>
-		<!-- 自定义tabbar -->
-		<view class="" v-if="show" @tap="switchDialog"></view>
-		<Tabbar nowIndex="0" @switchDialog="switchDialog"></Tabbar>
+	
 	</view>
 </template>
 
@@ -69,7 +70,7 @@
 			return {
 				// 自定义tabbar页面展示
 				show: false,
-				flag:false,
+				flag: false,
 				myPen_flag: false,
 				'date_d': '00',
 				'date_y': '2020',
@@ -132,29 +133,24 @@
 		},
 		onLoad() {
 			this.getTime(this);
-
 			this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
-             this.clear();
-             			this.showTools();
+			this.clear();
+			this.showTools();
 		},
 
 		methods: {
-              	showTools(){
-              				this.flag = !this.flag;
-              			},
-						mPen(){
-										this.myPen_flag = !this.myPen_flag;
-									},
+			showTools() {
+				this.flag = !this.flag;
+			},
+			mPen() {
+				this.myPen_flag = !this.myPen_flag;
+			},
 			// 自定义tabbar页面展示
 			switchDialog() {
 				let bool = this.show;
 				this.setData({
 					show: !bool
 				});
-			},
-
-			mPen() {
-				this.myPen_flag = !this.myPen_flag;
 			},
 			//获取当前时间
 			getTime() {

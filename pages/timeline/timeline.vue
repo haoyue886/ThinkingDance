@@ -4,7 +4,7 @@
 		你一共记录了 {{len}} 条灵感。
 	</view>
 		<view class="cu-timeline" v-for="(item,index) in dayList" :key="index" >
-			<view class="cu-time" >
+			<view class="cu-time">
 			<text>{{item.ltime.toISOString().slice(0, 10)}}</text>
 			</view>
 			<view class="cu-item cur cuIcon-time" @click="gotoAddnotes(index)">

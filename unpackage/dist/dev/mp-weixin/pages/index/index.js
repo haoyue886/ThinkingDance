@@ -190,6 +190,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 {
   components: {
     carousel: carousel,
@@ -222,17 +223,32 @@ __webpack_require__.r(__webpack_exports__);
       audioCtx: '' };
 
   },
-  onLoad: function onLoad() {
-    this.gotoTimeline();
+  onLoad: function onLoad() {var _this = this;
     this.getTime(this);
     var that = this;
     that.audioCtx = uni.createAudioContext('myAudio');
-    //that.getMusicUrl()
+    var innerAudioContext = uni.createInnerAudioContext();
+    innerAudioContext.autoplay = true;
+    innerAudioContext.src = 'https://win-web-rb01-sycdn.kuwo.cn/979f33d22e95aacd336dfc7ee34eb8a6/60af261a/resource/n1/21/38/3371198176.mp3';
+    innerAudioContext.onPlay(function () {
+      var that = _this;
+      if (that.isPlay) {
+        that.audioCtx.pause();
+        that.isPlay = !that.isPlay;
+        tools.showToast('您已暂停音乐播放~');
+      } else {
+        that.audioCtx.play();
+        that.isPlay = !that.isPlay;
+        tools.showToast('背景音乐已开启~');
+      }
+    });
   },
   onShow: function onShow() {
     var that = this;
     that.isPlay = true;
     //that.getMusicUrl()
+    var innerAudioContext = uni.createInnerAudioContext();
+
   },
 
   methods: {
@@ -319,16 +335,17 @@ __webpack_require__.r(__webpack_exports__);
       }
     }
     // 从云数据库获取音乐
-    /*getMusicUrl: function() {
-    	const that = this
-    	const db = uni.cloud.database()
-    	const music = db.collection('music')
-    	music.get().then(res => {
-    		that.audioUrl = res.data[0].musicUrl
-    		that.audioCtx.loop = true
-    		that.audioCtx.play()
-    	})
-    },*/ } };exports.default = _default;
+    // getMusicUrl: function() {
+    // 	const that = this
+    // 	const db = uni.cloud.database()
+    // 	const music = db.collection('music')
+    // 	music.get().then(res => {
+    // 		that.audioUrl = res.data[0].musicUrl
+    // 		that.audioCtx.loop = true
+    // 		that.audioCtx.play()
+    // 	})
+    // }
+  } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),

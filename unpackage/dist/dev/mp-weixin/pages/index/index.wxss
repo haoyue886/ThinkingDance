@@ -172,7 +172,7 @@ input{
 		-webkit-filter:opacity(90%);
 		        filter:opacity(90%);
 		border-radius: 50rpx;
-		box-shadow: 0 5rpx 50rpx #E35087;
+		box-shadow: 0 5rpx 30rpx #E35087;
 }
 
 /* 音乐组件 */
