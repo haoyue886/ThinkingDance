@@ -187,6 +187,7 @@ var _default =
   },
   onLoad: function onLoad() {
     this.get_list();
+
   },
   methods: {
     gotoAddnotes: function gotoAddnotes(e) {

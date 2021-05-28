@@ -163,6 +163,30 @@ var _default =
   },
   methods: {
     // 上传图片
+    ChooseImage: function ChooseImage() {//选择图片
+      var that = this;
+      wx.chooseImage({
+        count: 1,
+        sizeType: ['original', 'compressed'],
+        sourceType: ['album', 'camera'],
+        success: function success(res) {
+          console.log("图片选择成功", res);
+          that.imagePath = res.tempFilePaths[0];
+          wx.cloud.uploadFile({
+            cloudPath: 'user_img/' + new Date().getTime() + '.png', // 上传至云端的路径
+            filePath: res.tempFilePaths[0],
+            success: function success(res2) {
+              console.log("云存储图片路径", res2.fileID);
+              that.imgp = res2.fileID;
+            },
+            fail: function fail(res3) {
+              console.log("上传失败", res3.errMsg);
+
+            } });
+
+        } });
+
+    },
     choose_image: function choose_image() {
 
     },

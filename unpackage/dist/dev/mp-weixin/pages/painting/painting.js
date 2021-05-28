@@ -184,7 +184,7 @@ __webpack_require__.r(__webpack_exports__);
 //import Mycanvas from "../../static/js/theCanvas.js";
 
 var x = 0;
-var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 75));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 83));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
 
 {
   components: {

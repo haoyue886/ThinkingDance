@@ -8,7 +8,7 @@
 			<text>{{item.ltime.toISOString().slice(0, 10)}}</text>
 			</view>
 			<view class="cu-item cur cuIcon-time" @click="gotoAddnotes(index)">
-				<view class="content light shadow-blur" >
+				<view class="content   bg-gradual-purple shadow-blur"  >
 					<text>{{item.details}}</text>
 				</view>
 			</view>
@@ -32,11 +32,12 @@
 				userid:'',
 				dayList:[],
 				memorys:{},
-				len:0
+				len:0,
 			}
 		},
 		onLoad() {
 			this.get_list();
+			
 		},
 		methods:{
 			gotoAddnotes:function(e){
