@@ -11,7 +11,7 @@
 		<view class="login_text" @tap="getUserInfo">{{nickName}}</view>
 		<!-- 列表 -->
 		<view class="cu-list menu card-menu margin-top">
-			<view class="cu-item arrow">
+			<view class="cu-item arrow" @click="help" >
 				<view class="content flex">
 					<view class="cuIcon-form"></view>
 					<text class="margin-left">使用帮助</text>
@@ -139,6 +139,11 @@
 			licence() {
 				uni.navigateTo({
 					url: '/pages/user/licence'
+				})
+			},
+			help() {
+				uni.navigateTo({
+					url: '/pages/user/help'
 				})
 			}
 		}

@@ -56,6 +56,13 @@
 				"navigationBarTitleText":"声明",
 				"navigationBarTextStyle": "white"
 			}
+		},
+		{
+			"path":"pages/user/help",
+			"style":{
+				"navigationBarTitleText":"使用帮助",
+				"navigationBarTextStyle": "white"
+			}
 		}
 			
 	],
