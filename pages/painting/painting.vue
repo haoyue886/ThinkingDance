@@ -14,43 +14,35 @@
 				</view>
 			</view>
 			<!-- 右上功能键 -->
-			<view class="right-top">
-				<view id="top_tool_1">
-					<view class="t_tool iconfont icon-ico-back"></view>
-				</view>
-				<view id="top_tool_2">
-					<view class="t_tool iconfont icon-ico-forward"></view>
-				</view>
-				<view id="top_tool_3">
-					<view class="t_tool cuIcon-close fs" @click="clear()"></view>
-				</view>
-			</view>
+				<cover-view id="top_tool_1" @tap="clear()">
+					<cover-image class="t_tool" src="../../static/icon/ico-back.png"></cover-image>
+				</cover-view>
+				<cover-view id="top_tool_2" @tap="clear()">
+					<cover-image class="t_tool" src="../../static/icon/ico-forward.png"></cover-image>
+				</cover-view>
+				<cover-view id="top_tool_3" @tap="clear()">
+					<cover-image  class="t_tool" src="../../static/icon/shanchu.png"></cover-image>
+				</cover-view>
 			<!-- 画布 -->
 			<canvas id="myCanvas" canvas-id="myCanvas" disable-scroll="true" @touchmove="tmove" @touchstart="tstart"
 				@touchend="tend" @touchcancel="tcancel"></canvas>
 
 			<!-- 悬浮工具 -->
-			<view>
-
-
-				<view id="tool_box">
-					<view class="cuIcon-down a_tool_1" id="a_tool_1"></view>
-					<view class="iconfont icon-baocuntupian a_tool_2" id="a_tool_1"></view>
-					<view class="iconfont icon-xiangpi a_tool_3 " id="a_tool_1"></view>
-					<view class="cuIcon-write a_tool_4" id="a_tool_1" @click="mPen()"></view>
-					<view id="myPen" v-show="myPen_flag">
-						<view id="myPen_color">
-							<view class="myColor" v-for="i in colorArr" :key="i.color" :style="{background: i.color}"
-								@click="updateColor(i.color)"></view>
-						</view>
-						<view id="myPen_thickness">
-							<view class="myThick" v-for="j in thickness" :key="j.thickness"
-								:style="{width: j.thickness/5+'rpx'}" @click="updateThick(j.thickness)"></view>
-						</view>
-						<view id="myPen_weight"></view>
-					</view>
-				</view>
-			</view>
+				
+					<cover-view id="a_tool_1"> <cover-image  class="a_tool" src="../../static/icon/shangchuan.png"></cover-image></cover-view>
+					<cover-view id="a_tool_2"><cover-image  class="a_tool" src="../../static/icon/baocuntupian.png"></cover-image></cover-view>
+					<cover-view id="a_tool_3"><cover-image class="a_tool" src="../../static/icon/xiangpica.png"></cover-image></cover-view>
+					<cover-view id="a_tool_4"><cover-image  class="a_tool" @click="mPen()" src="../../static/icon/huabi.png">></cover-image></cover-view>
+					<cover-view id="myPen" v-show="myPen_flag">
+						<cover-view id="myPen_color">
+							<cover-view class="myColor" v-for="i in colorArr" :key="i.color" :style="{background: i.color}"
+								@click="updateColor(i.color)"></cover-view>
+						</cover-view>
+						<cover-view id="myPen_thickness">
+							<cover-view class="myThick" v-for="j in thickness" :key="j.thickness"
+								:style="{width: j.thickness/5+'rpx'}" @click="updateThick(j.thickness)"></cover-view>
+						</cover-view>
+					</cover-view>
 		</view>
 	
 	</view>
@@ -70,7 +62,7 @@
 			return {
 				// 自定义tabbar页面展示
 				show: false,
-				flag: false,
+				// flag: false,
 				myPen_flag: false,
 				'date_d': '00',
 				'date_y': '2020',
@@ -105,27 +97,27 @@
 				],
 				thickness: [ //画笔粗细 
 					{
-						thickness: 10,
-						active: false
-					},
-					{
 						thickness: 20,
 						active: false
 					},
 					{
 						thickness: 30,
-						active: true
+						active: false
 					},
 					{
 						thickness: 40,
+						active: true
+					},
+					{
+						thickness: 48,
 						active: false
 					},
 					{
-						thickness: 50,
+						thickness: 55,
 						active: false
 					},
 					{
-						thickness: 60,
+						thickness: 65,
 						active: false
 					}
 				],
@@ -133,15 +125,15 @@
 		},
 		onLoad() {
 			this.getTime(this);
-			this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
 			this.clear();
-			this.showTools();
+			// this.showTools();
+			this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
 		},
 
 		methods: {
-			showTools() {
-				this.flag = !this.flag;
-			},
+			// showTools() {
+			// 	this.flag = !this.flag;
+			// },
 			mPen() {
 				this.myPen_flag = !this.myPen_flag;
 			},
@@ -248,14 +240,15 @@
 				this.ctx.stroke()
 				this.ctx.draw(true);
 			},
+	
 			//清除
-			clear: function() {
+			clear:function(){
 				let that = this;
 				uni.getSystemInfo({
-					success: function(res) {
+					success: function(res){
 						let canvasw = res.windowWidth;
 						let canvash = res.windowHeight;
-						that.ctx.clearRect(0, 0, canvasw, canvash);
+						that.ctx.clearRect(0,0,canvasw,canvash);
 						that.ctx.draw(true);
 					},
 				})

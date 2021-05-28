@@ -180,14 +180,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 //import Mycanvas from "../../static/js/theCanvas.js";
 
@@ -202,7 +194,7 @@ var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensu
     return {
       // 自定义tabbar页面展示
       show: false,
-      flag: false,
+      // flag: false,
       myPen_flag: false,
       'date_d': '00',
       'date_y': '2020',
@@ -237,27 +229,27 @@ var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensu
 
       thickness: [//画笔粗细 
       {
-        thickness: 10,
-        active: false },
-
-      {
         thickness: 20,
         active: false },
 
       {
         thickness: 30,
-        active: true },
+        active: false },
 
       {
         thickness: 40,
+        active: true },
+
+      {
+        thickness: 48,
         active: false },
 
       {
-        thickness: 50,
+        thickness: 55,
         active: false },
 
       {
-        thickness: 60,
+        thickness: 65,
         active: false }] };
 
 
@@ -265,15 +257,15 @@ var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensu
   },
   onLoad: function onLoad() {
     this.getTime(this);
-    this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
     this.clear();
-    this.showTools();
+    // this.showTools();
+    this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
   },
 
   methods: {
-    showTools: function showTools() {
-      this.flag = !this.flag;
-    },
+    // showTools() {
+    // 	this.flag = !this.flag;
+    // },
     mPen: function mPen() {
       this.myPen_flag = !this.myPen_flag;
     },
@@ -380,6 +372,7 @@ var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensu
       this.ctx.stroke();
       this.ctx.draw(true);
     },
+
     //清除
     clear: function clear() {
       var that = this;

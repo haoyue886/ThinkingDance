@@ -1,221 +1,202 @@
-page{
+page {
 	width: 100%;
 	height: 100%;
-	font-family:YouYuan, SimSun,Microsoft YaHei,monospace;
+	font-family: YouYuan, SimSun, Microsoft YaHei, monospace;
 }
-.content{
-		width: 100%;
-		height: 100%;
-}
-
-
-
-    /*今日日期*/
-.date_{
-		width: 50rpx;
-		height: 50rpx;
-		float: left;
-		margin-right: 15rpx;
-		margin-left: 15rpx;
-		text-align: center;
-		color: #9f9f9f;
-}
-#date{
-		position: fixed;
-		top: 40rpx;
-		left: 5%;
-		z-index: 10;
-		border:1px solid #5B4CB1;
-		width:178rpx;
-		height: 120rpx;
-}
-#date_d{
-		font-size: 50rpx;
-		font-weight: 400;
-		color:#F6C542 ;
-}
-#line{
-		-webkit-transform: rotate(55deg);
-		        transform: rotate(55deg);
-		width: 4rpx;
-		height: 120rpx;
-		background-color: #5B4CB1;
-}
-#date_y_m{
-		position: absolute;
-		bottom: 0;
-		right: 16rpx;
-		font-size: 50rpx;
-		color: #5B4CB1;
+.content {
+	width: 100%;
+	height: 100%;
 }
 
 
 
-    /*右上功能栏*/
-.right-top{
-		   position: fixed;
-	       top:63rpx;
-		   right: 136rpx;
-		   z-index: 1;
-		   width:250rpx;
-		   height: 250rpx;
+/*今日日期*/
+.date_ {
+	width: 50rpx;
+	height: 50rpx;
+	float: left;
+	margin-right: 15rpx;
+	margin-left: 15rpx;
+	text-align: center;
+	color: #9f9f9f;
 }
-.t_tool{
-		font-size: 42rpx;
-		position: absolute;
-		top:50%;
-		left:50%;
-		-webkit-transform: translate(-50%,-50%);
-		        transform: translate(-50%,-50%);
-		width: 55rpx;
-		height: 30rpx;
-		color: #fff;
-		text-align: center;
-		line-height: 30rpx;
+#date {
+	position: fixed;
+	top: 40rpx;
+	left: 5%;
+	z-index: 10;
+	border: 1px solid #5B4CB1;
+	width: 178rpx;
+	height: 120rpx;
 }
-#top_tool_1{
-		z-index: 1;
-		position: absolute;
-		-webkit-transform: translate(149%,-235%);
-		        transform: translate(149%,-235%);
-		right: 50%;
-		top: 50%;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		background-color: #E35087;
+#date_d {
+	font-size: 50rpx;
+	font-weight: 400;
+	color: #F6C542;
 }
-#top_tool_2{
-		z-index: 1;
-		position: absolute;
-		-webkit-transform: translate(345%,-50%);
-		        transform: translate(345%,-50%);
-		right: 50%;
-		top: 50%;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		background-color: #F6C542;
+#line {
+	-webkit-transform: rotate(55deg);
+	        transform: rotate(55deg);
+	width: 4rpx;
+	height: 120rpx;
+	background-color: #5B4CB1;
 }
-#top_tool_3{
-		z-index: 1;
-		position: absolute;
-		-webkit-transform: translate(345%,-235%);
-		        transform: translate(345%,-235%);
-		right: 50%;
-		top: 50%;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		background-color: #5B4CB1;
-}
-.fs{font-size:55rpx;}
-#myCanvas{
-		background-color: #f4f8f9;
-		width: 100%;
-		height:1400rpx;
+#date_y_m {
+	position: absolute;
+	bottom: 0;
+	right: 16rpx;
+	font-size: 50rpx;
+	color: #5B4CB1;
 }
 
 
 
-    /*悬浮工具栏*/
-
-
-
-    /* 固定位置 */
-#tool_box{
-		position: fixed;
-		bottom: 324rpx;
-		left: 24rpx;
-		z-index: 1;
-		width:100rpx;
-		height: 250rpx;
-		font-size: 42rpx;
+/*右上功能栏*/
+.t_tool {
+	z-index: 2;
+	font-size: 42rpx;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	width: 55rpx;
+	height: 53rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 30rpx;
 }
-.a_tool_1{	
-		position: absolute;
-		-webkit-transform: translate(18%,-27%);
-		        transform: translate(18%,-27%);
-		right: 50%;
-		top: 50%;
-		color: #fff;
-		text-align: center;
-		line-height: 70rpx;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		background-color: #5B4CB1;
+#top_tool_1 {
+	z-index: 1;
+	position: fixed;
+	right: 126rpx;
+	top: 30rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #E35087;
 }
-.a_tool_2{
-		position: absolute;
-		-webkit-transform: translate(54%,121%);
-		        transform: translate(54%,121%);
-		right: 50%;
-		top: 50%;
-		color: #fff;
-		text-align: center;
-		line-height: 70rpx;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		font-size: 42rpx;
-		background-color: #F6C542;
+#top_tool_2 {
+	z-index: 1;
+	position: fixed;
+	right: 30rpx;
+	top: 120rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #F6C542;
 }
-.a_tool_3{
-		position: absolute;
-		-webkit-transform: translate(165%,247%);
-		        transform: translate(165%,247%);
-		right: 50%;
-		top: 50%;
-		color: #fff;
-		text-align: center;
-		line-height: 70rpx;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		font-size: 42rpx;
-		background-color: #E35087;
+#top_tool_3 {
+	z-index: 1;
+	position: fixed;
+	right: 30rpx;
+	top: 30rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #2122B9;
 }
-.a_tool_4{
-		position: absolute;
-		-webkit-transform: translate(282%,342%);
-		        transform: translate(282%,342%);
-		right: 50%;
-		top: 50%;
-		color: #fff;
-		text-align: center;
-		line-height: 70rpx;
-		width: 70rpx;
-		height: 70rpx;
-		border-radius: 50%;
-		background-color: #F6C542;
+#myCanvas {
+	background-color: #f4f8f9;
+	width: 100%;
+	height: 1400rpx;
 }
 
 
 
-    /*画笔样式*/
-#myPen{
-		width: 450rpx;
-		height: 120rpx;
-		background-color: #FFFFFF;
-		opacity: 0.7;
-		box-shadow: 0rpx 0rpx 30rpx 1rpx #e2e2e2;	
-		border-radius: 30rpx;
-		position: fixed;
-		bottom: 220rpx;
-		right: 160rpx;
+/*左下工具栏*/
+.a_tool {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
+	width: 50rpx;
+	height: 50rpx;
 }
-.myColor{
-		width: 43rpx;
-		height: 43rpx;
-		float: left;
-		margin: 10rpx 16rpx;
+#a_tool_1 {
+	z-index: 2;
+	position: fixed;
+	bottom: 410rpx;
+	left: 20rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #2122B9;
 }
-.myThick{
-		height: 43rpx;
-		float: left;
-		margin: 5rpx 35rpx;
-		background-color: #333333;
+#a_tool_2 {
+	z-index: 2;
+	position: fixed;
+	/* transform: translate(-377%,405%); */
+	left: 47rpx;
+	bottom: 305rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	font-size: 42rpx;
+	background-color: #F6C542;
+}
+#a_tool_3 {
+	z-index: 2;
+	position: fixed;
+	/* transform: translate(-280%,542%); */
+	left: 109rpx;
+	bottom: 215rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	font-size: 42rpx;
+	background-color: #E35087;
+}
+#a_tool_4 {
+	z-index: 2;
+	position: fixed;
+	/* transform: translate(-157%,650%); */
+	left: 200rpx;
+	bottom: 145rpx;
+	color: #fff;
+	text-align: center;
+	line-height: 70rpx;
+	width: 70rpx;
+	height: 70rpx;
+	border-radius: 50%;
+	background-color: #F6C542;
+}
+
+
+
+/*画笔样式*/
+#myPen {
+	width: 452rpx;
+	height: 120rpx;
+	background-color: #FFFFFF;
+	opacity: 0.7;
+	box-shadow: 0rpx 0rpx 30rpx 1rpx #e2e2e2;
+	border-radius: 30rpx;
+	position: fixed;
+	bottom: 225rpx;
+	right: 110rpx;
+}
+.myColor {
+	width: 45rpx;
+	height: 43rpx;
+	float: left;
+	margin: 10rpx 16rpx;
+}
+.myThick {
+	height: 48rpx;
+	float: left;
+	margin: 5rpx 34rpx;
+	background-color: #333333;
 }
 @font-face {
 	font-family: 'iconfont';

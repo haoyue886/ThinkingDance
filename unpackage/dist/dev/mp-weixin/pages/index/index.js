@@ -202,16 +202,16 @@ __webpack_require__.r(__webpack_exports__);
       show: false,
       // 轮播图
       imgList: [{
-        url: 'https://pcsdata.baidu.com/thumbnail/e69230404g9983290a2c9891f4fdc83a?fid=3159939267-16051585-179369120847406&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-cJNByhVW4s5%2Bx5yxQhY4rWuhfOs%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2427659356&dp-callid=0&time=1622016000&size=c1600_u1600&quality=100&vuk=-&ft=video',
+        url: 'https://wx2.sinaimg.cn/mw690/006ghMQ6gy1gqx8k7323xj30b507o40v.jpg',
         id: 1 },
       {
-        url: 'https://pcsdata.baidu.com/thumbnail/f7a624803k0ef1627ed5e980cb36172c?fid=3159939267-16051585-101544136594303&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-6T10O1VNmtyb4ZU8AkKy3%2FNAAi8%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2637449066&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
+        url: 'https://wx3.sinaimg.cn/mw690/006ghMQ6gy1gqx8k71vgzj30kb0bggn9.jpg',
         id: 2 },
       {
-        url: 'https://pcsdata.baidu.com/thumbnail/ccbd3d9f5l4edc0cf7c3482cf9daba82?fid=3159939267-16051585-1038846611864731&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-C58bswc4uV93wM4v5aOH5YIB%2Fuw%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2664185888&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
+        url: 'https://wx3.sinaimg.cn/mw690/006ghMQ6gy1gqx8k72572j30kt0dxmyf.jpg',
         id: 3 },
       {
-        url: 'https://pcsdata.baidu.com/thumbnail/0b6a2ee1cv7aec478e119f615a9b65d4?fid=3159939267-16051585-995592652578382&rt=pr&sign=FDTAER-yUdy3dSFZ0SVxtzShv1zcMqd-TH7Jr1o7oJiSibX3uL%2B%2FKgGr7K8%3D&expires=2h&chkv=0&chkbd=0&chkpc=&dp-logid=2609422452&dp-callid=0&time=1622019600&size=c1600_u1600&quality=100&vuk=-&ft=video',
+        url: 'https://wx1.sinaimg.cn/mw690/006ghMQ6gy1gqx8k742kgj30rm0fkn08.jpg',
         id: 4 }],
 
       'pass': '7',
@@ -223,7 +223,7 @@ __webpack_require__.r(__webpack_exports__);
       audioCtx: '' };
 
   },
-  onLoad: function onLoad() {var _this = this;
+  onLoad: function onLoad() {
     this.getTime(this);
     var that = this;
     that.audioCtx = uni.createAudioContext('myAudio');
@@ -231,16 +231,16 @@ __webpack_require__.r(__webpack_exports__);
     innerAudioContext.autoplay = true;
     innerAudioContext.src = 'https://win-web-rb01-sycdn.kuwo.cn/979f33d22e95aacd336dfc7ee34eb8a6/60af261a/resource/n1/21/38/3371198176.mp3';
     innerAudioContext.onPlay(function () {
-      var that = _this;
-      if (that.isPlay) {
-        that.audioCtx.pause();
-        that.isPlay = !that.isPlay;
-        tools.showToast('您已暂停音乐播放~');
-      } else {
-        that.audioCtx.play();
-        that.isPlay = !that.isPlay;
-        tools.showToast('背景音乐已开启~');
-      }
+      //            const that = this
+      // if (that.isPlay) {
+      // 	that.audioCtx.pause()
+      // 	that.isPlay = !that.isPlay
+      // 	tools.showToast('您已暂停音乐播放~')
+      // } else {
+      // 	that.audioCtx.play()
+      // 	that.isPlay = !that.isPlay
+      // 	tools.showToast('背景音乐已开启~')
+      // }
     });
   },
   onShow: function onShow() {
