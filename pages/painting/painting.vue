@@ -28,9 +28,8 @@
 				@touchend="tend" @touchcancel="tcancel"></canvas>
 
 			<!-- 悬浮工具 -->
-				
-					<cover-view id="a_tool_1"> <cover-image  class="a_tool" src="../../static/icon/shangchuan.png"></cover-image></cover-view>
-					<cover-view id="a_tool_2"><cover-image  class="a_tool" src="../../static/icon/baocuntupian.png"></cover-image></cover-view>
+					<cover-view id="a_tool_1"> <cover-image  class="a_tool" @click="save()" src="../../static/icon/shangchuan.png"></cover-image></cover-view>
+					<cover-view id="a_tool_2"><cover-image  class="a_tool" @click="savepic()" src="../../static/icon/baocuntupian.png"></cover-image></cover-view>
 					<cover-view id="a_tool_3"><cover-image class="a_tool" src="../../static/icon/xiangpica.png"></cover-image></cover-view>
 					<cover-view id="a_tool_4"><cover-image  class="a_tool" @click="mPen()" src="../../static/icon/huabi.png">></cover-image></cover-view>
 					<cover-view id="myPen" v-show="myPen_flag">
@@ -134,6 +133,18 @@
 			// showTools() {
 			// 	this.flag = !this.flag;
 			// },
+			save(){
+				uni.showToast({
+				    title: '上传成功',
+				    duration: 500
+				})
+			},
+			savepic(){
+				uni.showToast({
+				    title: '保存成功',
+				    duration: 500
+				})
+			},
 			mPen() {
 				this.myPen_flag = !this.myPen_flag;
 			},
