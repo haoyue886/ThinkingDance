@@ -63,6 +63,13 @@
 				"navigationBarTitleText":"使用帮助",
 				"navigationBarTextStyle": "white"
 			}
+		},
+		{
+			"path":"pages/user/about",
+			"style":{
+				"navigationBarTitleText":"关于",
+				"navigationBarTextStyle": "white"
+			}
 		}
 			
 	],

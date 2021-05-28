@@ -25,7 +25,7 @@
 			</view>
 		</view>
 		<view class="cu-list menu card-menu margin-top">
-			<view class="cu-item arrow">
+			<view class="cu-item arrow" @click="about">
 				<view class="content flex">
 					<view class="cuIcon-form"></view>
 					<text class="margin-left">关于</text>
@@ -144,6 +144,11 @@
 			help() {
 				uni.navigateTo({
 					url: '/pages/user/help'
+				})
+			},
+			about() {
+				uni.navigateTo({
+					url: '/pages/user/about'
 				})
 			}
 		}
