@@ -1,4 +1,7 @@
 {
   "navigationBarTitleText": "灵感画板",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "tabbar": "/components/tabbar/tabbar"
+  }
 }

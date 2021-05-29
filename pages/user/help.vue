@@ -1,5 +1,5 @@
 <template>
-	<view class="bg-purple light">
+	<view class="bg-purple light padding">
 		<view class="title bg-mauve light">“思维跳动”小程序使用帮助</view>
 		<view class="">		
 			<p style="text-indent: 2em;">首次进入“思维跳动”小程序，首先出现的页面是我们的首页，没错！您正听到的是我们结合音乐心理学为您精选挑选的纯音乐，我们希望以此来激发您的灵感和创意。</p>

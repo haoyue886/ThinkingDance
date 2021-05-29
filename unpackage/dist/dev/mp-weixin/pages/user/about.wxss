@@ -1,0 +1,16 @@
+
+page{
+	background-color: #D2F1F0;
+}
+.head{
+	position: relative;
+	width: 100%;
+}
+.font{
+	-webkit-writing-mode: vertical-lr;
+	        writing-mode: vertical-lr;
+	color: #409BF5;
+	font-weight: 1000;
+	font-size: 100rpx;
+}
+

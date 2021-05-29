@@ -127,9 +127,285 @@ __webpack_require__.r(__webpack_exports__);
   !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/vue-loader/lib??vue-loader-options!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/style.js!C:/Users/17623/Desktop/thinking beat思维跳动 - 副本/pages/painting/painting.vue?vue&type=script&lang=js& ***!
   \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js):\nSyntaxError: Unexpected token, expected \",\" (143:2)\n    at Object._raise (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:746:17)\n    at Object.raiseWithData (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:739:17)\n    at Object.raise (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:733:17)\n    at Object.unexpected (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:8807:16)\n    at Object.expect (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:8793:28)\n    at Object.parseObj (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10439:14)\n    at Object.parseExprAtom (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10055:28)\n    at Object.parseExprSubscripts (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9656:23)\n    at Object.parseMaybeUnary (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9636:21)\n    at Object.parseMaybeUnary (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:6877:20)\n    at Object.parseExprOps (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9506:23)\n    at Object.parseMaybeConditional (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9479:23)\n    at Object.parseMaybeAssign (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:9434:21)\n    at Object.parseMaybeAssign (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:6822:20)\n    at Object.parseObjectProperty (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10586:101)\n    at Object.parseObjPropValue (D:\\hbuilderx\\HBuilderX\\plugins\\uniapp-cli\\node_modules\\@babel\\parser\\lib\\index.js:10611:101)");
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+//import Mycanvas from "../../static/js/theCanvas.js";
+
+var x = 0;
+var y = 0;var Tabbar = function Tabbar() {__webpack_require__.e(/*! require.ensure | components/tabbar/tabbar */ "components/tabbar/tabbar").then((function () {return resolve(__webpack_require__(/*! ../../components/tabbar/tabbar */ 91));}).bind(null, __webpack_require__)).catch(__webpack_require__.oe);};var _default =
+
+{
+  components: {
+    Tabbar: Tabbar },
+
+  data: function data() {
+    return {
+      // 自定义tabbar页面展示
+      show: false,
+      // flag: false,
+      myPen_flag: false,
+      'date_d': '00',
+      'date_y': '2020',
+      'date_m': 'Aay',
+      ctx: '',
+      point: [],
+      colorArr: [//画笔颜色
+      {
+        color: "#fe4365",
+        active: true },
+
+      {
+        color: "#f9cdad",
+        active: false },
+
+      {
+        color: "#19CAAD",
+        active: false },
+
+      {
+        color: "#a7dce0",
+        active: false },
+
+      {
+        color: "#b3a8e9",
+        active: false },
+
+      {
+        color: "#03263a",
+        active: false }],
+
+
+      thickness: [//画笔粗细 
+      {
+        thickness: 20,
+        active: false },
+
+      {
+        thickness: 30,
+        active: false },
+
+      {
+        thickness: 40,
+        active: true },
+
+      {
+        thickness: 48,
+        active: false },
+
+      {
+        thickness: 55,
+        active: false },
+
+      {
+        thickness: 65,
+        active: false }] };
+
+
+
+  },
+  onLoad: function onLoad() {
+    this.getTime(this);
+    this.clear();
+    // this.showTools();
+    this.ctx = uni.createCanvasContext("myCanvas", this); //绘画对象
+  },
+
+  methods: {
+    // showTools() {
+    // 	this.flag = !this.flag;
+    // },
+    save: function save() {
+      uni.showToast({
+        title: '上传成功',
+        duration: 500 });
+
+    },
+    savepic: function savepic() {
+      uni.showToast({
+        title: '保存成功',
+        duration: 500 });
+
+    },
+    mPen: function mPen() {
+      this.myPen_flag = !this.myPen_flag;
+    },
+    // 自定义tabbar页面展示
+    switchDialog: function switchDialog() {
+      var bool = this.show;
+      this.setData({
+        show: !bool });
+
+    },
+    //获取当前时间
+    getTime: function getTime() {
+      var date = new Date();
+
+      var y = date.getFullYear();
+
+      var m = date.getMonth();
+      switch (m) {
+        case 0:
+          m = '1';
+          break;
+        case 1:
+          m = '2';
+          break;
+        case 2:
+          m = '3';
+          break;
+        case 3:
+          m = '4';
+          break;
+        case 4:
+          m = '5';
+          break;
+        case 5:
+          m = '6';
+          break;
+        case 6:
+          m = '7';
+          break;
+        case 7:
+          m = '8';
+          break;
+        case 8:
+          m = '9';
+          break;
+        case 9:
+          m = '10';
+          break;
+        case 10:
+          m = '11';
+          break;
+        case 11:
+          m = '12';
+          break;}
+
+
+      var d = date.getDate();
+      d = d < 10 ? '0' + d : d; //天补0
+
+      this.date_d = d;
+      this.date_y = y;
+      this.date_m = m;
+    },
+
+    //绘制功能
+    //开始触摸，获取起点
+    tstart: function tstart(e) {
+      var startX = e.changedTouches[0].x;
+      var startY = e.changedTouches[0].y;
+      var sPoint = {
+        X: startX,
+        Y: startY };
+
+      this.point.push(sPoint);
+      this.ctx.beginPath();
+    },
+    //移动手势
+    tmove: function tmove(e) {
+      var moveX = e.changedTouches[0].x;
+      var moveY = e.changedTouches[0].y;
+      var movePoint = {
+        X: moveX,
+        Y: moveY };
+
+      this.point.push(movePoint); //存点
+      if (this.point.length >= 2) {
+        this.draw(); //绘制路径
+      }
+    },
+    //停止手势
+    tend: function tend() {
+      this.point = [];
+    },
+    //触摸取消
+
+    //绘制
+    draw: function draw() {
+      var point1 = this.point[0];
+      var point2 = this.point[1];
+      this.point.shift();
+      // console.log(JSON.stringify(touchs))
+      this.ctx.moveTo(point1.X, point1.Y);
+      this.ctx.lineTo(point2.X, point2.Y);
+      this.ctx.stroke();
+      this.ctx.draw(true);
+    },
+
+    //清除
+    clear: function clear() {
+      var that = this;
+      uni.getSystemInfo({
+        success: function success(res) {
+          var canvasw = res.windowWidth;
+          var canvash = res.windowHeight;
+          that.ctx.clearRect(0, 0, canvasw, canvash);
+          that.ctx.draw(true);
+        } });
+
+    },
+    //选择画笔颜色
+    updateColor: function updateColor(color) {
+      console.log(color);
+      this.ctx.strokeStyle = color;
+    },
+    updateThick: function updateThick(thickness) {
+      console.log(thickness);
+      this.ctx.lineWidth = thickness / 10;
+    } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 

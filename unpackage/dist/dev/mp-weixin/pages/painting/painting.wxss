@@ -99,7 +99,7 @@ page {
 #myCanvas {
 	background-color: #f4f8f9;
 	width: 100%;
-	height: 1400rpx;
+	height: 1800rpx;
 }
 
 
