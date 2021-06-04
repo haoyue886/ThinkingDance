@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/painting/painting",
+    "pages/user/user",
+    "pages/timeline/timeline",
+    "pages/user/feedback",
+    "pages/addnotes/addnotes",
+    "pages/notes/notes",
+    "pages/user/licence",
+    "pages/user/help",
+    "pages/user/about"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Thinking Beat思维跳跃",
+    "navigationBarBackgroundColor": "#5B4CB1",
+    "backgroundColor": "#f4f8f9"
+  },
+  "tabBar": {
+    "color": "#cdcdcd",
+    "selectedColor": "#b7eff9",
+    "borderStyle": "black",
+    "backgroundColor": "#5B4CB1",
+    "list": [
+      {
+        "pagePath": "pages/painting/painting",
+        "iconPath": "static/images/huaban.png",
+        "selectedIconPath": "static/images/huaban.png",
+        "text": "画板"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/images/house.png",
+        "selectedIconPath": "static/images/house.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "static/images/user.png",
+        "selectedIconPath": "static/images/user.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {},
+  "usingComponents": {},
+  "sitemapLocation": "sitemap.json"
+}

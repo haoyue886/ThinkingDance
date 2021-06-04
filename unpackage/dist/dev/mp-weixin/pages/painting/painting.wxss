@@ -2,6 +2,7 @@ page {
 	width: 100%;
 	height: 100%;
 	font-family: YouYuan, SimSun, Microsoft YaHei, monospace;
+	background-color: #f4f8f9;
 }
 .content {
 	width: 100%;
@@ -99,7 +100,7 @@ page {
 #myCanvas {
 	background-color: #f4f8f9;
 	width: 100%;
-	height: 1800rpx;
+	height: 1100rpx;
 }
 
 
@@ -176,7 +177,7 @@ page {
 
 /*画笔样式*/
 #myPen {
-	width: 452rpx;
+	width: 457rpx;
 	height: 120rpx;
 	background-color: #FFFFFF;
 	opacity: 0.7;

@@ -1,0 +1,10 @@
+(global["webpackJsonp"]=global["webpackJsonp"]||[]).push([["components/tabbar/tabbar"],{"52cc":function(n,t,a){"use strict";a.r(t);var e=a("5d3b"),o=a.n(e);for(var i in e)"default"!==i&&function(n){a.d(t,n,(function(){return e[n]}))}(i);t["default"]=o.a},"5d3b":function(n,t,a){"use strict";(function(n){Object.defineProperty(t,"__esModule",{value:!0}),t.default=void 0;var a={data:function(){return{tabbarList:[{index:0,pagePath:"../painting/painting",title:"画板",icon:"/static/images/huaban.png",onIcon:"/static/images/huaban.png",color:"#9B9B9B",onColor:"#19C29C"},{index:1,pagePath:"../index/index",title:"首页",icon:"/static/images/house.png",onIcon:"/static/images/house.png",color:"#9B9B9B",onColor:"#19C29C"},{index:2,pagePath:"../user/user",title:"个人中心",icon:"/static/images/user.png",onIcon:"/static/images/user.png",color:"#9B9B9B",onColor:"#19C29C"}]}},components:{},props:{nowIndex:String},options:{addGlobalClass:!0},methods:{changePage:function(t){var a=t.currentTarget.dataset,e=a.path;a.index;n.switchTab({url:e})}}};t.default=a}).call(this,a("543d")["default"])},"7ed3":function(n,t,a){"use strict";var e=a("ad1f"),o=a.n(e);o.a},ad1f:function(n,t,a){},bff6:function(n,t,a){"use strict";var e;a.d(t,"b",(function(){return o})),a.d(t,"c",(function(){return i})),a.d(t,"a",(function(){return e}));var o=function(){var n=this,t=n.$createElement;n._self._c},i=[]},d9ea:function(n,t,a){"use strict";a.r(t);var e=a("bff6"),o=a("52cc");for(var i in o)"default"!==i&&function(n){a.d(t,n,(function(){return o[n]}))}(i);a("7ed3");var c,r=a("f0c5"),u=Object(r["a"])(o["default"],e["b"],e["c"],!1,null,null,null,!1,e["a"],c);t["default"]=u.exports}}]);
+;(global["webpackJsonp"] = global["webpackJsonp"] || []).push([
+    'components/tabbar/tabbar-create-component',
+    {
+        'components/tabbar/tabbar-create-component':(function(module, exports, __webpack_require__){
+            __webpack_require__('543d')['createComponent'](__webpack_require__("d9ea"))
+        })
+    },
+    [['components/tabbar/tabbar-create-component']]
+]);

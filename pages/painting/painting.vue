@@ -14,36 +14,44 @@
 				</view>
 			</view>
 			<!-- 右上功能键 -->
-				<cover-view id="top_tool_1" @tap="clear()">
-					<cover-image class="t_tool" src="../../static/icon/ico-back.png"></cover-image>
-				</cover-view>
-				<cover-view id="top_tool_2" @tap="clear()">
-					<cover-image class="t_tool" src="../../static/icon/ico-forward.png"></cover-image>
-				</cover-view>
-				<cover-view id="top_tool_3" @tap="clear()">
-					<cover-image  class="t_tool" src="../../static/icon/shanchu.png"></cover-image>
-				</cover-view>
+			<cover-view id="top_tool_1" @tap="clear()">
+				<cover-image class="t_tool" src="../../static/icon/ico-back.png"></cover-image>
+			</cover-view>
+			<cover-view id="top_tool_2" @tap="clear()">
+				<cover-image class="t_tool" src="../../static/icon/ico-forward.png"></cover-image>
+			</cover-view>
+			<cover-view id="top_tool_3" @tap="clear()">
+				<cover-image class="t_tool" src="../../static/icon/shanchu.png"></cover-image>
+			</cover-view>
 			<!-- 画布 -->
 			<canvas id="myCanvas" canvas-id="myCanvas" disable-scroll="true" @touchmove="tmove" @touchstart="tstart"
 				@touchend="tend" @touchcancel="tcancel"></canvas>
 
 			<!-- 悬浮工具 -->
-					<cover-view id="a_tool_1"> <cover-image  class="a_tool" @click="save()" src="../../static/icon/shangchuan.png"></cover-image></cover-view>
-					<cover-view id="a_tool_2"><cover-image  class="a_tool" @click="savepic()" src="../../static/icon/baocuntupian.png"></cover-image></cover-view>
-					<cover-view id="a_tool_3"><cover-image class="a_tool" src="../../static/icon/xiangpica.png"></cover-image></cover-view>
-					<cover-view id="a_tool_4"><cover-image  class="a_tool" @click="mPen()" src="../../static/icon/huabi.png">></cover-image></cover-view>
-					<cover-view id="myPen" v-show="myPen_flag">
-						<cover-view id="myPen_color">
-							<cover-view class="myColor" v-for="i in colorArr" :key="i.color" :style="{background: i.color}"
-								@click="updateColor(i.color)"></cover-view>
-						</cover-view>
-						<cover-view id="myPen_thickness">
-							<cover-view class="myThick" v-for="j in thickness" :key="j.thickness"
-								:style="{width: j.thickness/5+'rpx'}" @click="updateThick(j.thickness)"></cover-view>
-						</cover-view>
-					</cover-view>
+			<cover-view id="a_tool_1">
+				<cover-image class="a_tool" @click="save()" src="../../static/icon/shangchuan.png"></cover-image>
+			</cover-view>
+			<cover-view id="a_tool_2">
+				<cover-image class="a_tool" @click="savepic()" src="../../static/icon/baocuntupian.png"></cover-image>
+			</cover-view>
+			<cover-view id="a_tool_3">
+				<cover-image class="a_tool" @click="clearCanvas()" src="../../static/icon/xiangpica.png"></cover-image>
+			</cover-view>
+			<cover-view id="a_tool_4">
+				<cover-image class="a_tool" @click="mPen()" src="../../static/icon/huabi.png">></cover-image>
+			</cover-view>
+			<cover-view id="myPen" v-show="myPen_flag">
+				<cover-view id="myPen_color">
+					<cover-view class="myColor" v-for="i in colorArr" :key="i.color" :style="{background: i.color}"
+						@click="updateColor(i.color)"></cover-view>
+				</cover-view>
+				<cover-view id="myPen_thickness">
+					<cover-view class="myThick" v-for="j in thickness" :key="j.thickness"
+						:style="{width: j.thickness/5+'rpx'}" @click="updateThick(j.thickness)"></cover-view>
+				</cover-view>
+			</cover-view>
 		</view>
-	
+
 	</view>
 </template>
 
@@ -59,6 +67,9 @@
 		},
 		data() {
 			return {
+				startX: 0,
+				startY: 0,
+				isClear: false,
 				// 自定义tabbar页面展示
 				show: false,
 				// flag: false,
@@ -133,19 +144,20 @@
 			// showTools() {
 			// 	this.flag = !this.flag;
 			// },
-			save(){
+			save() {
 				uni.showToast({
-				    title: '上传成功',
-				    duration: 500
+					title: '上传成功',
+					duration: 500
 				})
 			},
-			savepic(){
+			savepic() {
 				uni.showToast({
-				    title: '保存成功',
-				    duration: 500
+					title: '保存成功',
+					duration: 500
 				})
 			},
 			mPen() {
+				this.isClear = false;
 				this.myPen_flag = !this.myPen_flag;
 			},
 			// 自定义tabbar页面展示
@@ -218,8 +230,34 @@
 					X: startX,
 					Y: startY
 				};
-				this.point.push(sPoint);
-				this.ctx.beginPath();
+				// this.point.push(sPoint);
+				// this.ctx.beginPath();
+				if (this.isClear) {
+					//判断是否启用的橡皮擦功能  ture表示清除  false表示画画
+					this.ctx.setStrokeStyle('#F8F8F8'); //设置线条样式 此处设置为画布的背景颜色  橡皮擦原理就是：利用擦过的地方被填充为画布的背景颜色一致 从而达到橡皮擦的效果 
+
+					this.ctx.setLineCap('round'); //设置线条端点的样式
+
+					this.ctx.setLineJoin('round'); //设置两线相交处的样式
+
+					this.ctx.setLineWidth(8); //设置线条宽度
+
+					this.ctx.save(); //保存当前坐标轴的缩放、旋转、平移信息
+
+					this.ctx.beginPath(); //开始一个路径 
+
+					this.ctx.arc(this.startX, this.startY, 5, 0, 2 * Math.PI,
+					true); //添加一个弧形路径到当前路径，顺时针绘制  这里总共画了360度  也就是一个圆形 
+
+					this.ctx.fill(); //对当前路径进行填充
+
+					this.ctx.restore(); //恢复之前保存过的坐标轴的缩放、旋转、平移信息
+				} else {
+
+					// this.ctx.setLineCap('round'); // 让线条圆润 
+					this.point.push(sPoint);
+					this.ctx.beginPath();
+				}
 			},
 			//移动手势
 			tmove(e) {
@@ -229,10 +267,37 @@
 					X: moveX,
 					Y: moveY
 				};
-				this.point.push(movePoint); //存点
-				if (this.point.length >= 2) {
-					this.draw(); //绘制路径
+				// this.point.push(movePoint); //存点
+				// if (this.point.length >= 2) {
+				// 	this.draw(); //绘制路径
+				// }
+				if (this.isClear) {
+					//判断是否启用的橡皮擦功能  ture表示清除  false表示画画
+					this.ctx.save(); //保存当前坐标轴的缩放、旋转、平移信息
+
+					this.ctx.moveTo(this.startX, this.startY); //把路径移动到画布中的指定点，但不创建线条
+
+					this.ctx.lineTo(moveX, moveY); //添加一个新点，然后在画布中创建从该点到最后指定点的线条
+
+					this.ctx.stroke(); //对当前路径进行描边
+
+					this.ctx.restore(); //恢复之前保存过的坐标轴的缩放、旋转、平移信息
+
+					this.startX = moveX;
+					this.startY = moveY;
+				} else {
+					this.point.push(movePoint);
+					if (this.point.length >= 2) {
+						this.draw(); //绘制路径
+					}
+
 				}
+				uni.drawCanvas({
+					canvasId: 'myCanvas',
+					reserve: true,
+					actions: this.ctx.getActions() // 获取绘图动作数组
+
+				});
 			},
 			//停止手势
 			tend() {
@@ -251,15 +316,15 @@
 				this.ctx.stroke()
 				this.ctx.draw(true);
 			},
-	
+
 			//清除
-			clear:function(){
+			clear: function() {
 				let that = this;
 				uni.getSystemInfo({
-					success: function(res){
+					success: function(res) {
 						let canvasw = res.windowWidth;
 						let canvash = res.windowHeight;
-						that.ctx.clearRect(0,0,canvasw,canvash);
+						that.ctx.clearRect(0, 0, canvasw, canvash);
 						that.ctx.draw(true);
 					},
 				})
@@ -268,10 +333,19 @@
 			updateColor: function(color) {
 				console.log(color);
 				this.ctx.strokeStyle = color;
+				this.isClear = false;
 			},
 			updateThick: function(thickness) {
 				console.log(thickness);
 				this.ctx.lineWidth = thickness / 10;
+				this.isClear = false;
+			},
+			clearCanvas: function() {
+				if (this.isClear) {
+					this.isClear = false;
+				} else {
+					this.isClear = true;
+				}
 			}
 
 		}
